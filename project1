@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My CYOA Story</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        #story {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button:hover {
+            background: #e8e8e8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="story">
+    <h1 id="title"></h1>
+    <p id="text"></p>
+    <div id="choices"></div>
+</div>
+
+<script>
+
+const story = {
+    start: {
+        title: "Chapter 1",
+        text: "You wake up in a mysterious room. There are two doors in front of you.",
+        choices: [
+            {
+                text: "Open the wooden door",
+                next: "forest"
+            },
+            {
+                text: "Open the metal door",
+                next: "basement"
+            }
+        ]
+    },
+
+    forest: {
+        title: "The Forest",
+        text: "You step outside into a dark forest. You hear something moving nearby.",
+        choices: [
+            {
+                text: "Investigate the sound",
+                next: "end1"
+            },
+            {
+                text: "Run away",
+                next: "end2"
+            }
+        ]
+    },
+
+    basement: {
+        title: "The Basement",
+        text: "You walk down the stairs and find an old chest.",
+        choices: [
+            {
+                text: "Open the chest",
+                next: "end3"
+            }
+        ]
+    },
+
+    end1: {
+        title: "The End",
+        text: "You discover a hidden village. Your adventure begins...",
+        choices: []
+    },
+
+    end2: {
+        title: "The End",
+        text: "You escape safely, but you never learn the forest's secret.",
+        choices: []
+    },
+
+    end3: {
+        title: "The End",
+        text: "Inside the chest is a map leading to a lost treasure.",
+        choices: []
+    }
+};
+
+
+function showScene(scene) {
+    const current = story[scene];
+
+    document.getElementById("title").innerHTML = current.title;
+    document.getElementById("text").innerHTML = current.text;
+
+    const choicesDiv = document.getElementById("choices");
+    choicesDiv.innerHTML = "";
+
+    current.choices.forEach(choice => {
+        const button = document.createElement("button");
+        button.innerHTML = choice.text;
+        button.onclick = () => showScene(choice.next);
+        choicesDiv.appendChild(button);
+    });
+}
+
+showScene("start");
+
+</script>
+
+</body>
+</html>
