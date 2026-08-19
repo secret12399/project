@@ -211,18 +211,16 @@
 const story = {
 
     start: {
-        chapter: "Chapter I",
-        title: "The Two Doors",
+        chapter: "P1",
+        title: "Carmy Bear's Adventure!",
 
         text:
-            "You wake up in a mysterious room. " +
-            "The air is cold, and you have no memory of how you got here. " +
-            "Two doors stand before you.",
+            "The Carmy bear touches down in Switzerland. She is overcome by hunger after a long journey and searches for a snack. To her great dismay, she learns from a friendly raccoon that Switzerland does not have sushi! She must now find an alternative because she is baby and she needs food.",
 
         choices: [
             {
-                text: "Open the wooden door",
-                next: "forest"
+                text: "Cry",
+                next: "f"
             },
 
             {
@@ -233,27 +231,13 @@ const story = {
     },
 
 
-    forest: {
-        chapter: "Chapter I",
-
-        title: "The Forest",
+    cry: {
+        chapter: "P1-1",
 
         text:
-            "You step outside into a dark forest. " +
-            "Moonlight filters through the trees. " +
-            "Then you hear something moving nearby.",
+            "You are baby but NO CRYING. Please go back and choose another option.",
 
-        choices: [
-            {
-                text: "Investigate the sound",
-                next: "end1"
-            },
-
-            {
-                text: "Run away",
-                next: "end2"
-            }
-        ]
+        choices: []
     },
 
 
