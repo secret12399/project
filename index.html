@@ -1,35 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My CYOA Story</title>
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 20px;
-            background: #f5f5f5;
+        * {
+            box-sizing: border-box;
         }
 
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            background:
+                radial-gradient(circle at top, #293b5f 0%, #111827 45%, #05070c 100%);
+
+            color: #f5f1e8;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px;
+        }
+
+        /* Main story box */
         #story {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
+            width: 100%;
+            max-width: 750px;
+
+            background: rgba(15, 18, 28, 0.92);
+
+            border: 1px solid rgba(255, 255, 255, 0.12);
+
+            border-radius: 18px;
+
+            padding: 45px;
+
+            box-shadow:
+                0 25px 70px rgba(0, 0, 0, 0.6),
+                0 0 40px rgba(90, 120, 200, 0.08);
+
+            backdrop-filter: blur(10px);
+
+            animation: fadeIn 0.6s ease;
+        }
+
+        /* Small chapter label */
+        .chapter {
+            text-align: center;
+
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+
+            letter-spacing: 4px;
+            text-transform: uppercase;
+
+            color: #9caed0;
+
+            margin-bottom: 12px;
+        }
+
+        /* Story title */
+        #title {
+            text-align: center;
+
+            font-size: 42px;
+
+            margin: 0 0 25px;
+
+            color: #f8f1df;
+
+            text-shadow:
+                0 0 20px rgba(255, 255, 255, 0.08);
+        }
+
+        /* Story text */
+        #text {
+            font-size: 19px;
+
+            line-height: 1.8;
+
+            color: #d9d9df;
+
+            margin-bottom: 35px;
+
+            text-align: center;
+        }
+
+        /* Choice buttons */
+        #choices {
+            display: flex;
+            flex-direction: column;
+
+            gap: 13px;
         }
 
         button {
-            display: block;
             width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            font-size: 16px;
+
+            padding: 16px 20px;
+
+            background: rgba(255, 255, 255, 0.04);
+
+            color: #eee;
+
+            border: 1px solid rgba(255, 255, 255, 0.16);
+
+            border-radius: 10px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 17px;
+
             cursor: pointer;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
         button:hover {
-            background: #e8e8e8;
+            background: rgba(125, 155, 220, 0.15);
+
+            border-color: rgba(160, 185, 240, 0.6);
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        /* Decorative divider */
+        .divider {
+            width: 80px;
+            height: 1px;
+
+            background: #7183aa;
+
+            margin: 0 auto 30px;
+
+            opacity: 0.7;
+        }
+
+        /* Fade animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px;
+            }
+
+            #story {
+                padding: 30px 22px;
+            }
+
+            #title {
+                font-size: 32px;
+            }
+
+            #text {
+                font-size: 17px;
+            }
         }
     </style>
 </head>
@@ -37,22 +192,39 @@
 <body>
 
 <div id="story">
+
+    <div class="chapter" id="chapter"></div>
+
     <h1 id="title"></h1>
+
+    <div class="divider"></div>
+
     <p id="text"></p>
+
     <div id="choices"></div>
+
 </div>
+
 
 <script>
 
 const story = {
+
     start: {
-        title: "Chapter 1",
-        text: "You wake up in a mysterious room. There are two doors in front of you.",
+        chapter: "Chapter I",
+        title: "The Two Doors",
+
+        text:
+            "You wake up in a mysterious room. " +
+            "The air is cold, and you have no memory of how you got here. " +
+            "Two doors stand before you.",
+
         choices: [
             {
                 text: "Open the wooden door",
                 next: "forest"
             },
+
             {
                 text: "Open the metal door",
                 next: "basement"
@@ -60,14 +232,23 @@ const story = {
         ]
     },
 
+
     forest: {
+        chapter: "Chapter I",
+
         title: "The Forest",
-        text: "You step outside into a dark forest. You hear something moving nearby.",
+
+        text:
+            "You step outside into a dark forest. " +
+            "Moonlight filters through the trees. " +
+            "Then you hear something moving nearby.",
+
         choices: [
             {
                 text: "Investigate the sound",
                 next: "end1"
             },
+
             {
                 text: "Run away",
                 next: "end2"
@@ -75,9 +256,17 @@ const story = {
         ]
     },
 
+
     basement: {
+        chapter: "Chapter I",
+
         title: "The Basement",
-        text: "You walk down the stairs and find an old chest.",
+
+        text:
+            "You walk down a narrow staircase. " +
+            "At the bottom, you discover an ancient wooden chest " +
+            "covered in dust.",
+
         choices: [
             {
                 text: "Open the chest",
@@ -86,42 +275,88 @@ const story = {
         ]
     },
 
+
     end1: {
-        title: "The End",
-        text: "You discover a hidden village. Your adventure begins...",
+        chapter: "Ending",
+
+        title: "The Hidden Village",
+
+        text:
+            "You discover a hidden village deep within the forest. " +
+            "Strangely, the villagers seem to have been waiting for you.",
+
         choices: []
     },
+
 
     end2: {
-        title: "The End",
-        text: "You escape safely, but you never learn the forest's secret.",
+        chapter: "Ending",
+
+        title: "Escape",
+
+        text:
+            "You escape safely, but you never discover what was hiding " +
+            "among the trees.",
+
         choices: []
     },
 
+
     end3: {
-        title: "The End",
-        text: "Inside the chest is a map leading to a lost treasure.",
+        chapter: "Ending",
+
+        title: "The Lost Treasure",
+
+        text:
+            "Inside the chest is an ancient map. " +
+            "A single red mark points toward a place that isn't on any map.",
+
         choices: []
     }
+
 };
 
 
 function showScene(scene) {
+
     const current = story[scene];
 
-    document.getElementById("title").innerHTML = current.title;
-    document.getElementById("text").innerHTML = current.text;
+    document.getElementById("chapter").textContent =
+        current.chapter;
 
-    const choicesDiv = document.getElementById("choices");
+    document.getElementById("title").textContent =
+        current.title;
+
+    document.getElementById("text").textContent =
+        current.text;
+
+
+    const choicesDiv =
+        document.getElementById("choices");
+
     choicesDiv.innerHTML = "";
 
+
     current.choices.forEach(choice => {
-        const button = document.createElement("button");
-        button.innerHTML = choice.text;
-        button.onclick = () => showScene(choice.next);
+
+        const button =
+            document.createElement("button");
+
+        button.textContent =
+            choice.text;
+
+        button.onclick = () => {
+
+            showScene(choice.next);
+
+        };
+
         choicesDiv.appendChild(button);
+
     });
+
 }
+
 
 showScene("start");
 
