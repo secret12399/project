@@ -215,24 +215,28 @@ const story = {
         title: "Carmy Bear's Adventure!",
 
         text:
-            "The Carmy bear touches down in Switzerland. She is overcome by hunger after a long journey and searches for a snack. To her great dismay, she learns from a friendly raccoon that Switzerland does not have sushi! She must now find an alternative because she is baby and she needs food.",
+            "The Carmy bear touches down in Switzerland. She is overcome by hunger after a long journey and searches for a snack. To her great dismay, she learns from a friendly raccoon that Switzerland does not have sushi and the nearest cafe is 3 kilometers away! She must now find an alternative because she is baby and she needs food.",
 
         choices: [
             {
                 text: "Cry",
-                next: "f"
+                next: "Cry"
             },
 
             {
-                text: "Open the metal door",
-                next: "basement"
+                text: "Follow the Raccoon",
+                next: "Raccoon"
+            },
+            {
+                text: "Find the Cafe",
+                next: "Cafe"
             }
         ]
     },
 
 
-    cry: {
-        chapter: "P1-1",
+    Cry: {
+        chapter: "P1-1: Cry",
 
         text:
             "You are baby but NO CRYING. Please go back and choose another option.",
@@ -241,20 +245,24 @@ const story = {
     },
 
 
-    basement: {
-        chapter: "Chapter I",
-
-        title: "The Basement",
+    Raccoon: {
+        chapter: "P1-2: Raccoon",
 
         text:
-            "You walk down a narrow staircase. " +
-            "At the bottom, you discover an ancient wooden chest " +
-            "covered in dust.",
+            "You slowly follow after the raccoon, keeping your distance. His eyes dart back every once in a while to see if he's being followed, but you manage to remain stealthy. A small ",
 
         choices: [
             {
-                text: "Open the chest",
-                next: "end3"
+                text: "Continue to stalk",
+                next: ""
+            },
+            {
+                text: "Ask for rabies vaccination papers",
+                next: ""
+            },
+            {
+                text: "",
+                next: ""
             }
         ]
     },
