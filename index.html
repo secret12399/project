@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>My CYOA Story</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -29,7 +31,9 @@
             padding: 30px;
         }
 
+
         /* Main story box */
+
         #story {
             width: 100%;
             max-width: 750px;
@@ -51,22 +55,9 @@
             animation: fadeIn 0.6s ease;
         }
 
-        /* Small chapter label */
-        .chapter {
-            text-align: center;
-
-            font-family: Arial, sans-serif;
-            font-size: 13px;
-
-            letter-spacing: 4px;
-            text-transform: uppercase;
-
-            color: #9caed0;
-
-            margin-bottom: 12px;
-        }
 
         /* Story title */
+
         #title {
             text-align: center;
 
@@ -80,7 +71,9 @@
                 0 0 20px rgba(255, 255, 255, 0.08);
         }
 
+
         /* Story text */
+
         #text {
             font-size: 19px;
 
@@ -91,15 +84,20 @@
             margin-bottom: 35px;
 
             text-align: center;
+
+            white-space: pre-line;
         }
 
+
         /* Choice buttons */
+
         #choices {
             display: flex;
             flex-direction: column;
 
             gap: 13px;
         }
+
 
         button {
             width: 100%;
@@ -127,6 +125,7 @@
                 box-shadow 0.2s ease;
         }
 
+
         button:hover {
             background: rgba(125, 155, 220, 0.15);
 
@@ -138,13 +137,45 @@
                 0 5px 20px rgba(0, 0, 0, 0.3);
         }
 
+
         button:active {
             transform: translateY(0);
         }
 
+
+        /* Back button */
+
+        #backButton {
+            width: auto;
+
+            margin-top: 30px;
+
+            padding: 10px 18px;
+
+            background: rgba(255, 255, 255, 0.03);
+
+            color: #aaa;
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            font-size: 14px;
+
+            display: none;
+        }
+
+
+        #backButton:hover {
+            color: #eee;
+
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+
         /* Decorative divider */
+
         .divider {
             width: 80px;
+
             height: 1px;
 
             background: #7183aa;
@@ -154,8 +185,11 @@
             opacity: 0.7;
         }
 
+
         /* Fade animation */
+
         @keyframes fadeIn {
+
             from {
                 opacity: 0;
                 transform: translateY(10px);
@@ -165,35 +199,44 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+
         }
 
+
         /* Mobile */
+
         @media (max-width: 600px) {
 
             body {
                 padding: 15px;
             }
 
+
             #story {
                 padding: 30px 22px;
             }
+
 
             #title {
                 font-size: 32px;
             }
 
+
             #text {
                 font-size: 17px;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<div id="story">
 
-    <div class="chapter" id="chapter"></div>
+<div id="story">
 
     <h1 id="title"></h1>
 
@@ -203,21 +246,26 @@
 
     <div id="choices"></div>
 
+    <button id="backButton" onclick="goBack()">← Back</button>
+
 </div>
 
 
 <script>
 
+
 const story = {
 
+
     start: {
-        chapter: "P1",
+
         title: "Carmy Bear's Adventure!",
 
         text:
-            "The Carmy bear touches down in Switzerland. She is overcome by hunger after a long journey and searches for a snack. To her great dismay, she learns from a friendly raccoon that Switzerland does not have sushi and the nearest cafe is 3 kilometers away! She must now find an alternative because she is baby and she needs food.",
+            "The Carmy bear touches down in Switzerland. She is overcome by hunger after a long journey and searches for a snack. To her great dismay, she learns from a friendly raccoon that Switzerland does not have sushi and the nearest cafe, while incredible, is 3 kilometers away! She must now find an alternative because she is baby and she needs food.",
 
         choices: [
+
             {
                 text: "Cry",
                 next: "Cry"
@@ -227,97 +275,287 @@ const story = {
                 text: "Follow the Raccoon",
                 next: "Raccoon"
             },
+
             {
                 text: "Find the Cafe",
                 next: "Cafe"
             }
+
         ]
+
     },
 
 
     Cry: {
-        chapter: "P1-1: Cry",
+
+        title: "Cry",
 
         text:
             "You are baby but NO CRYING. Please go back and choose another option.",
 
         choices: []
+
     },
 
 
     Raccoon: {
-        chapter: "P1-2: Raccoon",
+
+        title: "Raccoon",
 
         text:
-            "You slowly follow after the raccoon, keeping your distance. His eyes dart back every once in a while to see if he's being followed, but you manage to remain stealthy. A small ",
+            "You slowly follow after the raccoon, keeping your distance. His eyes dart back every once in a while to see if he's being followed, but you manage to remain stealthy. A small bomb is conveniently sitting on the sidewalk.",
 
         choices: [
+
             {
-                text: "Continue to stalk",
+                text: "Continue to stalk him",
+                next: "Stalk"
+            },
+
+            {
+                text: "Approach and speak to him",
+                next: "Approach"
+            },
+
+            {
+                text: "Use the bomb to make him into soup",
+                next: "BOMB"
+            }
+
+        ]
+
+    },
+
+
+    Stalk: {
+
+        title: "Stalk",
+
+        text:
+            "The raccoon turns into an alley. You peek around the corner and notice him scurry past a gated doorway and down some stairs. Following him in, you see a gang of raccoons sitting around a table littered with maps and guns, illuminated by a fire burning in the center.",
+
+        choices: [
+
+            {
+                text: "Make yourself known",
                 next: ""
             },
+
             {
-                text: "Ask for rabies vaccination papers",
+                text: "Use the bomb on the gang",
                 next: ""
             },
+
             {
-                text: "",
+                text: "Continue to watch",
+                next: ""
+            },
+
+            {
+                text: "OR: Choose your own answer",
                 next: ""
             }
+
         ]
+
     },
 
 
-    end1: {
-        chapter: "Ending",
+    Approach: {
 
-        title: "The Hidden Village",
+        title: "Approach",
 
         text:
-            "You discover a hidden village deep within the forest. " +
-            "Strangely, the villagers seem to have been waiting for you.",
+            'You approach and ask for vaccination papers. "How racist!" he exclaims rambunctiously. However, he does pull out a paper in Swiss that seems to indicate he is not infected with rabies. You also notice a police officer working around the area.',
 
-        choices: []
+        choices: [
+
+            {
+                text: "Question the validity of the papers",
+                next: ""
+            },
+
+            {
+                text: "Apologize for the insinuation",
+                next: ""
+            },
+
+            {
+                text: "Report the raccoon to the police",
+                next: ""
+            },
+
+            {
+                text: "OR: Choose your own answer",
+                next: ""
+            }
+
+        ]
+
     },
 
 
-    end2: {
-        chapter: "Ending",
+    BOMB: {
 
-        title: "Escape",
+        title: "BOMB",
 
         text:
-            "You escape safely, but you never discover what was hiding " +
-            "among the trees.",
+            "You pull the pin of the bomb and toss it at the raccoon. The bomb hits him in the head and the impact dazes him but it does not explode. The raccoon runs into an alleyway once he gains his senses back.",
 
-        choices: []
+        choices: [
+
+            {
+                text: "Pursue him",
+                next: ""
+            },
+
+            {
+                text: "Run away",
+                next: ""
+            },
+
+            {
+                text: 'Investigate the "bomb"',
+                next: ""
+            },
+
+            {
+                text: "OR: Choose your own answer",
+                next: ""
+            }
+
+        ]
+
     },
 
 
-    end3: {
-        chapter: "Ending",
+    Cafe: {
 
-        title: "The Lost Treasure",
+        title: "Cafe",
 
         text:
-            "Inside the chest is an ancient map. " +
-            "A single red mark points toward a place that isn't on any map.",
+            "You set off to find the cafe. With each step, hunger and sleepiness grows. However, you are reinvigorated as you see people walking with nice iced coffees down the street. You are close. As you wait at the crosswalk just across from the cafe, you hear a sound from an alley to your right. Just as you're about to look, the scent of raspberry croissants and nice iced lattes envelops you.",
 
-        choices: []
+        choices: [
+
+            {
+                text: "Continue to the cafe",
+                next: "Cont_cafe"
+            },
+
+            {
+                text: "Investigate the noise",
+                next: "Investigate"
+            }
+
+        ]
+
+    },
+
+
+    Cont_cafe: {
+
+        title: "Continue to Cafe",
+
+        text:
+            "You enter the cafe and order a croissant and iced coffee. The owner of the cafe brings them over, along with many other pastries she baked. Everything tastes unimaginably good. You ask for the bill, but the owner insists on giving it for free. You also overhear her offering free food to multiple other customers.",
+
+        choices: [
+
+            {
+                text: "Inquire about her business model",
+                next: ""
+            },
+
+            {
+                text: "Accept the free food and leave",
+                next: ""
+            },
+
+            {
+                text: "Discreetly investigate the cafe",
+                next: ""
+            },
+
+            {
+                text: "OR: Choose your own answer",
+                next: ""
+            }
+
+        ]
+
+    },
+
+
+    Investigate: {
+
+        title: "Noise Investigation",
+
+        text:
+            "You turn into the alley and hear faint chatter and squeaking behind a gated doorway. As you peek through the gate, you see a dimly lit wooden staircase leading down. As you lean closer, the improperly fastened lock falls open.",
+
+        choices: [
+
+            {
+                text: "Open the gate and search further",
+                next: ""
+            },
+
+            {
+                text: "Turn back and go to the cafe",
+                next: ""
+            },
+
+            {
+                text: "Continue listening from outside",
+                next: ""
+            },
+
+            {
+                text: "OR: Choose your own answer",
+                next: ""
+            }
+
+        ]
+
     }
 
 };
 
 
-function showScene(scene) {
+
+/* 
+   This stores every scene the player has visited.
+*/
+
+let history = [];
+
+
+
+function showScene(scene, addToHistory = true) {
+
 
     const current = story[scene];
 
-    document.getElementById("chapter").textContent =
-        current.chapter;
+
+    /*
+       Add this scene to the history.
+
+       When using the Back button,
+       addToHistory is false so we don't
+       create a loop.
+    */
+
+    if (addToHistory) {
+
+        history.push(scene);
+
+    }
+
 
     document.getElementById("title").textContent =
         current.title;
+
 
     document.getElementById("text").textContent =
         current.text;
@@ -326,16 +564,20 @@ function showScene(scene) {
     const choicesDiv =
         document.getElementById("choices");
 
+
     choicesDiv.innerHTML = "";
 
 
     current.choices.forEach(choice => {
 
+
         const button =
             document.createElement("button");
 
+
         button.textContent =
             choice.text;
+
 
         button.onclick = () => {
 
@@ -343,16 +585,88 @@ function showScene(scene) {
 
         };
 
+
         choicesDiv.appendChild(button);
 
     });
 
+
+    /*
+       Show the Back button only after
+       the player has actually moved
+       somewhere.
+    */
+
+    const backButton =
+        document.getElementById("backButton");
+
+
+    if (history.length > 1) {
+
+        backButton.style.display = "block";
+
+    }
+
+    else {
+
+        backButton.style.display = "none";
+
+    }
+
 }
 
 
+
+/*
+   Go back to the previous scene.
+*/
+
+function goBack() {
+
+
+    if (history.length <= 1) {
+
+        return;
+
+    }
+
+
+    /*
+       Remove the current scene.
+    */
+
+    history.pop();
+
+
+    /*
+       Get the previous scene.
+    */
+
+    const previousScene =
+        history[history.length - 1];
+
+
+    /*
+       Display it without adding it
+       to the history again.
+    */
+
+    showScene(previousScene, false);
+
+}
+
+
+
+/*
+   Start the story.
+*/
+
 showScene("start");
+
 
 </script>
 
+
 </body>
+
 </html>
