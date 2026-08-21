@@ -246,29 +246,10 @@ const story = {
 
         choices: [
             {
-                text: "Cry",
-                next: "Cry"
-            },
-
-            {
                 text: "Follow the Raccoon",
                 next: "Raccoon"
             },
-            {
-                text: "Find the Cafe",
-                next: "Cafe"
-            }
         ]
-    },
-
-
-    Cry: {
-        chapter: "P1-1: Cry",
-
-        text:
-            "You are baby but NO CRYING. Please go back and choose another option.",
-
-        choices: []
     },
 
 
@@ -280,46 +261,11 @@ const story = {
 
         choices: [
             {
-                text: "Continue to stalk him",
-                next: "Stalk"
-            },
-            {
                 text: "Approach and speak to him",
                 next: "Approach"
-            },
-            {
-                text: "Use the bomb to make him into soup",
-                next: "BOMB"
             }
         ]
     },
-
-    Stalk: {
-        chapter: "P1-2-1: Stalk",
-
-        text:
-            "The raccoon turns into an alley. You peek around the corner and notice him scurry past a gated doorway and down some stairs. Following him in, you see a gang of raccoons sitting around a table littered with maps and guns, illuminated by a fire burning in the center.",
-
-        choices: [
-            {
-                text: "Make yourself known",
-                next: ""
-            },
-            {
-                text: "Use the bomb on the gang",
-                next: ""
-            },
-            {
-                text: "Continue to watch",
-                next: ""
-            },
-            {
-                text: "OR: Choose your own answer",
-                next: ""
-            }
-        ]
-    },
-
 
     Approach: {
         chapter: "P1-2-2: Approach",
@@ -329,122 +275,191 @@ const story = {
 
         choices: [
             {
-                text: "Question the validity of the papers",
-                next: ""
-            },
-            {
                 text: "Apologize for the insinuation",
+                next: "Apologize"
+            }
+        ]
+    },
+    
+    Apologize: {
+        chapter: "P2: Apologize",
+
+        text:
+            "The raccoon hesistantly accepts your apology because you seem sincere and he introduces himself as Coop the Moop. However, he is skeptical of you. The two of you walk along and he leads you to the cafe that he mentioned earlier. The elderly owner gives you a really nice iced coffee, raspberry croissant, and tons of other pastries and snacks. She and the raccoon talk and seem to know each other. The snacks and coffee are the best you've ever had in your life. Coop dismisses himself and heads downstairs. When you try to pay the owner declines and insists it's free.",
+
+        choices: [
+            {
+                text: "Follow Coop",
+                next: "Follow"
+            },
+            {
+                text: "Question the cafe owner",
+                next: "Question"
+            },
+            {
+                text: "Leave",
+                next: "Leave"
+            },
+        ]
+    },
+
+    Follow: {
+        chapter: "P2-1: Follow",
+
+        text:
+            'You excuse yourself, pretending to head to the washroom downstairs. As you reach the bottom of the stairs, you rush forward and stop a large steel door from closing all the way. After a few moments pass, you open it slightly and see Coop scurrying around a corner. Past the door lies a dim corridor lit by torches. The old marble walls are well maintained and have carvings etched in them. You slowly round the corner, ensuring nobody sees you, and reach a balcony overlooking a large roundtable covered in maps, lit by a large fire roaring in the center with the letters "RG" inscribed below. Coop sits at the table with six other raccoons.',
+
+        choices: [
+            {
+                text: "Wait and listen",
+                next: "Wait"
+            },
+            {
+                text: "Make yourself known",
+                next: "Appear"
+            },
+            {
+                text: "Leave",
+                next: "Leave2"
+            },
+        ]
+    },
+
+    Wait: {
+        chapter: "P2-1-1: Wait & Listen",
+
+        text:
+            'As you eavesdrop, you hear one more raccoon approaching behind you and duck to the side to avoid being seen. He heads down and takes his seat at the table. A drippy raccoon begins to speak. "Guys, please. Please guys. We have to start. Things are going according to plan. And Coop just told me he might have a very kind and beautiful human that can help with our heist. While she did ask for rabies papers, she treated him kinder than any other young human has before. She even asked him for his advice on food options."',
+        choices: [
+            {
+                text: "Make yourself known",
                 next: ""
             },
             {
-                text: "Report the raccoon to the police",
+                text: "Use the bomb",
                 next: ""
             },
             {
-                text: "OR: Choose your own answer",
+                text: "Leave",
+                next: ""
+            },
+            {
+                text: "OR: Choose your own option",
+                next: ""
+            },
+        ]
+    },
+
+    Appear: {
+        chapter: "P2-1-2: Make yourself known",
+
+        text:
+            '"Hi guys! I\'m Carm. What\'s up?" A drippy raccoon eagerly invites you down and offers you an empty seat at the table, as if expecting you. "Hi Carm I\'m Ed Garaccoon. Coop was just telling me about you. I sent him to find a kind human to help us, a hard task with all the raccoon haters in Switzerland, but he said you approached him and were kind! How miraculous! We would like to enlist your help in a heist to fight raccoon racism. Will you help us?"',
+        choices: [
+            {
+                text: "Yes",
+                next: ""
+            },
+            {
+                text: "No",
+                next: ""
+            },
+            {
+                text: "Tell me more",
+                next: ""
+            },
+            {
+                text: "OR: Choose your own option",
+                next: ""
+            },
+        ]
+    },
+
+    Leave2: {
+        chapter: "P2-1-3: Leave",
+
+        text:
+            'As you begin moving, the raccoons hear you and run to block you. Coop kindly asks you to sit at the table with them and talk for a few minutes to hear about their plans, which they would like to involve you in. If you choose to leave, he assures you they will honour your wishes but will be very sad.',
+        choices: [
+            {
+                text: "Sit with them",
+                next: ""
+            },
+            {
+                text: "Leave",
+                next: ""
+            },
+            {
+                text: "OR: Choose your own option",
+                next: ""
+            },
+        ]
+    },
+
+    Question: {
+        chapter: "P2-2: Question",
+
+        text:
+            'You ask the owner why she is giving you all this food for free. She tells you that Coop and his friends help to fund the cafe\'s expenses so she never charges them for anything. In her old age, she doesn\'t have the energy to work enough hours in a week to support the cafe fully by herself. After sitting for a little while longer to finish the nice iced coffee, Coop returns and asks you to come with him for a super secret mission.',
+        choices: [
+            {
+                text: "Go with him",
+                next: "Go_coop"
+            },
+            {
+                text: "Leave",
+                next: "Leave2"
+            },
+        ]
+    },
+
+    Go_coop: {
+        chapter: "P2-2-1: Follow Coop",
+
+        text:
+            'Coop leads you down the stairs of the cafe, past a large steel door, and down a torch-lit corridor lined with marble bricks. As you descend deeper into the lair, you see a large roundtable with seven raccoons sitting. The table is covered in maps and documents, with a large fire in the center of the table illuminating them, and the letters "RH" inscribed below. A drippy raccoon eagerly invites you down and offers you an empty seat at the table. "Hi Carm I\'m Ed Garaccoon. Coop was just telling me about you. I sent him to find a kind young human to help us, a hard task with all the raccoon haters in Switzerland, but he said you approached him and were kind! How miraculous! We would like to enlist your help in a heist to fight raccoon racism. Will you help us?"',
+        choices: [
+            {
+                text: "Yes",
+                next: ""
+            },
+            {
+                text: "No",
+                next: ""
+            },
+            {
+                text: "Tell me more",
+                next: ""
+            },
+            {
+                text: "OR: Choose your own option",
+                next: ""
+            },
+        ]
+    },
+
+    Leave2: {
+        chapter: "P2-3: Leave",
+
+        text:
+            '"Carm!" Coop runs after you. He begs you to help him and explains that the raccoons of Switzerland are suffering and desperately need your help. Most other humans treat them with disgust, and at best indifference. He insists that without your help they will not only continue to suffer, but their suffering will grow exponentially.',
+        choices: [
+            {
+                text: "Help Coop",
+                next: ""
+            },
+            {
+                text: "Leave",
+                next: ""
+            },
+            {
+                text: "OR: Choose your own option",
                 next: ""
             },
         ]
     },
     
-    BOMB: {
-        chapter: "P1-2-3: BOMB",
-
-        text:
-            "You pull the pin of the bomb and toss it at the raccoon. The bomb hits him in the head and the impact dazes him but it does not explode. The raccoon runs into an alleyway once he gains his senses back.",
-
-        choices: [
-            {
-                text: "Pursue him",
-                next: ""
-            },
-            {
-                text: "Run away",
-                next: ""
-            },
-            {
-                text: 'Investigate the "bomb"',
-                next: ""
-            },
-            {
-                text: "OR: Choose your own answer",
-                next: ""
-            },
-        ]
-    },
-
-
-    Cafe: {
-        chapter: "P1-3: Cafe",
-
-        text:
-            "You set off to find the cafe. With each step, hunger and sleepiness grows. However, you are reinvigorated as you see people walking with nice iced coffees down the street. You are close. As you wait at the crosswalk just across from the cafe, you hear a sound from an alley to your right. Just as you're about to look, the scent of raspberry croissants and nice iced lattes envelops you.",
-
-        choices: [
-            {
-                text: "Continue to the cafe",
-                next: "Cont_cafe"
-            },
-            {
-                text: "Investigate the noise",
-                next: "Investigate"
-            },
-        ]
-    },
-
-    Cont_cafe: {
-        chapter: "P1-3-1: Continue to Cafe",
-
-        text:
-            "You enter the cafe and order a croissant and iced coffee. The owner of the cafe brings them over, along with many other pastries she baked. Everything tastes unimaginably good. You ask for the bill, but the owner insists on giving it for free. You also overhear her offering free food to multiple other customers.",
-
-        choices: [
-            {
-                text: "Inquire about her business model",
-                next: ""
-            },
-            {
-                text: "Accept the free food and leave",
-                next: ""
-            },
-            {
-                text: "Discreetly investigate the cafe",
-                next: ""
-            },
-            {
-                text: "OR: Choose your own answer",
-                next: ""
-            }
-        ]
-    },
-
-
-    Investigate: {
-        chapter: "P1-3-2: Noise Investigation",
-
-        text:
-            "You turn into the alley and hear faint chatter and squeaking behind a gated doorway. As you peek through the gate, you see a dimly lit wooden staircase leading down. As you lean closer, the improperly fastened lock falls open.",
-
-        choices: [
-            {
-                text: "Open the gate and search further",
-                next: ""
-            },
-            {
-                text: "Turn back and go to the cafe",
-                next: ""
-            },
-            {
-                text: "Continue listening from outside",
-                next: ""
-            },
-            {
-                text: "OR: Choose your own answer",
-                next: ""
-            },
-        ]
-    },
-
+    
 };
 
 
