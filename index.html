@@ -332,136 +332,39 @@ const story = {
             'As you eavesdrop, you hear one more raccoon approaching behind you and duck to the side to avoid being seen. He heads down and takes his seat at the table. A drippy raccoon begins to speak. "Guys, please. Please guys. We have to start. Things are going according to plan. And Coop just told me he might have a very kind and beautiful human that can help with our heist. While she did ask for rabies papers, she treated him kinder than any other young human has before. She even asked him for his advice on food options."',
         choices: [
             {
-                text: "Make yourself known",
-                next: ""
-            },
-            {
-                text: "Use the bomb",
-                next: ""
-            },
-            {
-                text: "Leave",
-                next: ""
-            },
-            {
-                text: "OR: Choose your own option",
-                next: ""
+                text: "Turn invisible and listen",
+                next: "Listen"
             },
         ]
     },
 
-    Appear: {
-        chapter: "P2-1-2: Make yourself known",
+    Listen: {
+        chapter: "P3: Listen Invisibly",
 
         text:
-            '"Hi guys! I\'m Carm. What\'s up?" A drippy raccoon eagerly invites you down and offers you an empty seat at the table, as if expecting you. "Hi Carm I\'m Ed Garaccoon. Coop was just telling me about you. I sent him to find a kind human to help us, a hard task with all the raccoon haters in Switzerland, but he said you approached him and were kind! How miraculous! We would like to enlist your help in a heist to fight raccoon racism. Will you help us?"',
+            'You turn invisible and take a seat at the table. The raccoons hear quiet motions but they are mild enough that they all ignore them. The raccoons discuss their plans to infiltrate the Swiss Federal Intelligence Service building and destroy all records pertaining to raccoons, rabies records, and all information on their group, RaccGang, that is close to being discovered. "All the plans are ready, we just need Carm to agree to help and we can pull it off," says the drippy raccoon. Coop goes to look for you upstairs in the cafe and reveal their master plot.',
         choices: [
             {
-                text: "Yes",
+                text: "Return to the cafe",
                 next: ""
-            },
-            {
-                text: "No",
-                next: ""
-            },
-            {
-                text: "Tell me more",
-                next: ""
-            },
-            {
-                text: "OR: Choose your own option",
-                next: ""
-            },
-        ]
-    },
-
-    Leave2: {
-        chapter: "P2-1-3: Leave",
-
-        text:
-            'As you begin moving, the raccoons hear you and run to block you. Coop kindly asks you to sit at the table with them and talk for a few minutes to hear about their plans, which they would like to involve you in. If you choose to leave, he assures you they will honour your wishes but will be very sad.',
-        choices: [
-            {
-                text: "Sit with them",
-                next: ""
-            },
-            {
-                text: "Leave",
-                next: ""
-            },
-            {
-                text: "OR: Choose your own option",
-                next: ""
-            },
-        ]
-    },
-
-    Question: {
-        chapter: "P2-2: Question",
-
-        text:
-            'You ask the owner why she is giving you all this food for free. She tells you that Coop and his friends help to fund the cafe\'s expenses so she never charges them for anything. In her old age, she doesn\'t have the energy to work enough hours in a week to support the cafe fully by herself. After sitting for a little while longer to finish the nice iced coffee, Coop returns and asks you to come with him for a super secret mission.',
-        choices: [
-            {
-                text: "Go with him",
-                next: "Go_coop"
-            },
-            {
-                text: "Leave",
-                next: "Leave"
-            },
-        ]
-    },
-
-    Go_coop: {
-        chapter: "P2-2-1: Follow Coop",
-
-        text:
-            'Coop leads you down the stairs of the cafe, past a large steel door, and down a torch-lit corridor lined with marble bricks. As you descend deeper into the lair, you see a large roundtable with seven raccoons sitting. The table is covered in maps and documents, with a large fire in the center of the table illuminating them, and the letters "RH" inscribed below. A drippy raccoon eagerly invites you down and offers you an empty seat at the table. "Hi Carm I\'m Ed Garaccoon. Coop was just telling me about you. I sent him to find a kind young human to help us, a hard task with all the raccoon haters in Switzerland, but he said you approached him and were kind! How miraculous! We would like to enlist your help in a heist to fight raccoon racism. Will you help us?"',
-        choices: [
-            {
-                text: "Yes",
-                next: ""
-            },
-            {
-                text: "No",
-                next: ""
-            },
-            {
-                text: "Tell me more",
-                next: ""
-            },
-            {
-                text: "OR: Choose your own option",
-                next: ""
-            },
-        ]
-    },
-
-    Leave: {
-        chapter: "P2-3: Leave",
-
-        text:
-            '"Carm!" Coop runs after you. He begs you to help him and explains that the raccoons of Switzerland are suffering and desperately need your help. Most other humans treat them with disgust, and at best indifference. He insists that without your help they will not only continue to suffer, but their suffering will grow exponentially.',
-        choices: [
-            {
-                text: "Help Coop",
-                next: "Go_coop"
-            },
-            {
-                text: "Leave",
-                next: "end"
             }
         ]
     },
 
-    end: {
-        chapter: "P2-3-2: Death",
+    Return: {
+        chapter: "P3-1: Return to Cafe",
 
         text:
-            'Carmy bear\'s vacation continues as planned. A few days later in Austria, she sees on the news that multiple raccoons in Switzerland died under unknown circumstances, including little Coop the Moop.',    
-        choices: []
+            'You turn invisible and take a seat at the table. The raccoons hear quiet motions but they are mild enough that they all ignore them. The raccoons discuss their plans to infiltrate the Swiss Federal Intelligence Service building and destroy all records pertaining to raccoons, rabies records, and all information on their group, RaccGang, that is close to being discovered. "All the plans are ready, we just need Carm to agree to help and we can pull it off," says the drippy raccoon. Coop goes to look for you upstairs in the cafe and reveal their master plot.',
+        choices: [
+            {
+                text: "Return to the cafe",
+                next: ""
+            }
+        ]
     },
+
+
 };
 
 
