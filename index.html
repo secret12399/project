@@ -292,14 +292,6 @@ const story = {
                 text: "Follow Coop",
                 next: "Follow"
             },
-            {
-                text: "Question the cafe owner",
-                next: "Question"
-            },
-            {
-                text: "Leave",
-                next: "Leave"
-            },
         ]
     },
 
@@ -313,14 +305,6 @@ const story = {
             {
                 text: "Wait and listen",
                 next: "Wait"
-            },
-            {
-                text: "Make yourself known",
-                next: "Appear"
-            },
-            {
-                text: "Leave",
-                next: "Leave2"
             },
         ]
     },
@@ -355,12 +339,70 @@ const story = {
         chapter: "P3-1: Return to Cafe",
 
         text:
-            'You turn invisible and take a seat at the table. The raccoons hear quiet motions but they are mild enough that they all ignore them. The raccoons discuss their plans to infiltrate the Swiss Federal Intelligence Service building and destroy all records pertaining to raccoons, rabies records, and all information on their group, RaccGang, that is close to being discovered. "All the plans are ready, we just need Carm to agree to help and we can pull it off," says the drippy raccoon. Coop goes to look for you upstairs in the cafe and reveal their master plot.',
+            'You quickly exit the chamber, remaining right behind Coop and stepping as lightly as possible. You run to get through the steel door with him before it closes, then as he steps into the cafe, you become visible and head upstairs. You see Coop looking around for you. "Hi Coop, were you looking for me?" Coop\'s face lights up. "Yes Carm! I have a proposition for you." The two of you sit at a table in the corner of the cafe, away from everyone. "I\'m a member of a group called RaccGang. In recent years Switzerland has become increasingly hostile towards raccoons. The police have been rounding up innocent raccoons, planting fake evidence of rabies, and killing us. My own brother, Boop, was arrested, beaten, and is facing death on false charges. RaccGang has been helping raccoons escape and start new lives, get rabies treatments, and veterinary records. But we\'re about to get caught. And we need your help. I can\'t speak about this any further in public. Will you come to our hideout and listen to our proposal?"',
         choices: [
             {
-                text: "Return to the cafe",
+                text: "Hear RaccGang out",
+                next: "Help_raccs"
+            },
+            {
+                text: "Leave",
+                next: "Leave_p3"
+            },
+        ]
+    },
+
+    Help_raccs: {
+        chapter: "P3-1-1: Hear Out RaccGang",
+
+        text:
+            'Coop leads you down to the lair once more. You sit at the table and the drippy raccoon introduces himself as Robert. "Hi Carm." Coop told us about you. He said you are a very kind young woman, and you showed empathy towards him. That is a rare occurrence in Switzerland. We have been persecuted for many years. Not many raccoons are left, and those that are fear for our lives every day. We only want freedom and safety. The Swiss government is about to discover us, and if that happens, we will be captured and killed. Even if we escape the country, they will hunt us down because we have hindered too many of their raccoon-hating plans. We must destroy their records. Then we can find the remaining raccoons of Switzerland, and we can all escape with our lives. All we ask of you is to infiltrate the building of the Swiss intelligence agency. We have a tour set up for a visiting Italian diplomat named Ella. They do not know her face or any details about her. They will guide her around the building and show her the capabilities of Swiss intelligence, believing that they have an opportunity to help Italian defence. This is a lie, and the reason they were eager to set up this tour. They wish only to gain access to Italian intelligence to find the raccoons we helped escape across the Italian border and find asylum. We would like you to be Ella and wear a button camera. We need only to see the building layout. Will you help us Carm?"',
+        choices: [
+            {
+                text: '"I will help"',
                 next: ""
-            }
+            },
+            {
+                text: '"What do I get out of this?"',
+                next: ""
+            },
+            {
+                text: '"I can\'t help you"',
+                next: ""
+            },
+            {
+                text: "OR: Choose your own answer",
+                next: ""
+            },
+        ]
+    },
+
+    Leave_p3: {
+        chapter: "P3-1-2: Don\'t Help RaccGang",
+
+        text:
+            'You leave the cafe. After covering some distance, you are surrounded by police cars. You are arrested and driven to the station for questioning. Before your questioning, you are put into a nice cell next to a group of raccoons. Your cell is clean and tidy, with a nice clean bed and a plate of steak and potatoes waiting for you. The raccoons\' cell is dingy and dirty, with no beds and bowls of mushed up food laying on the ground. A young raccoon identifies himself as Boop the Shmoop. He is covered in bruises but makes his best effort to smile and greet you warmly. A guard yells at him to get away from your cell and activates a shock collar they put on him. The guard approaches. "We heard reports you were seen speaking with a raccoon on the street this morning and that you were hungry. Hence we\'ve made you a nice steak. Finish your food. After, if you tell us everything you know about that raccoon and his dealings, you may leave, and we will send you off with dessert. Otherwise you will be deported." The guard leaves you and returns to his office.',
+        choices: [
+            {
+                text: '"Are you Coop\'s brother?"',
+                next: ""
+            },
+            {
+                text: "Eat and inform on RaccGang",
+                next: ""
+            },
+            {
+                text: "Eat and mislead them about RaccGang",
+                next: ""
+            },
+            {
+                text: "Decline to eat and stay slient",
+                next: ""
+            },
+            {
+                text: "OR: Choose your own option",
+                next: ""
+            },
         ]
     },
 
