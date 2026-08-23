@@ -343,16 +343,12 @@ const story = {
         choices: [
             {
                 text: "Hear RaccGang out",
-                next: "Help_raccs"
-            },
-            {
-                text: "Leave",
-                next: "Leave_p3"
+                next: "Hear_raccs"
             },
         ]
     },
 
-    Help_raccs: {
+    Hear_raccs: {
         chapter: "P3-1-1: Hear Out RaccGang",
 
         text:
@@ -360,53 +356,111 @@ const story = {
         choices: [
             {
                 text: '"I will help"',
-                next: ""
-            },
-            {
-                text: '"What do I get out of this?"',
-                next: ""
-            },
-            {
-                text: '"I can\'t help you"',
-                next: ""
-            },
-            {
-                text: "OR: Choose your own answer",
-                next: ""
+                next: "Help_raccs"
             },
         ]
     },
 
-    Leave_p3: {
-        chapter: "P3-1-2: Don\'t Help RaccGang",
+    Help_raccs: {
+        chapter: "P4: Help RaccGang",
 
         text:
-            'You leave the cafe. After covering some distance, you are surrounded by police cars. You are arrested and driven to the station for questioning. Before your questioning, you are put into a nice cell next to a group of raccoons. Your cell is clean and tidy, with a nice clean bed and a plate of steak and potatoes waiting for you. The raccoons\' cell is dingy and dirty, with no beds and bowls of mushed up food laying on the ground. A young raccoon identifies himself as Boop the Shmoop. He is covered in bruises but makes his best effort to smile and greet you warmly. A guard yells at him to get away from your cell and activates a shock collar they put on him. The guard approaches. "We heard reports you were seen speaking with a raccoon on the street this morning and that you were hungry. Hence we\'ve made you a nice steak. Finish your food. After, if you tell us everything you know about that raccoon and his dealings, you may leave, and we will send you off with dessert. Otherwise you will be deported." The guard leaves you and returns to his office.',
-        choices: [
+            'You head to the building of the Swiss Federal Intelligence Service and they are ready for you. You are equipped with the button camera and a tiny earpiece with Robert\'s voice on the other end. The security stops you on the way in and instructs you to go through a metal detector. Robert tells you that this is not according to plan and they were not supposed to use the emtal detector on Ella. He is certain that the button camera is not detectable, but is unsure if the earpiece will trigger the metal detector.',
+        choices:[   
             {
-                text: '"Are you Coop\'s brother?"',
+                text: 'Go through the metal detector',
+                next: "go_thru"
+            },
+        ]
+    },
+
+    go_thru: {
+        chapter: "P4-1: Infiltrate FIS",
+
+        text:
+            'The earpiece does not trigger the metal detector as you step through. An officer escorts you upstairs and shows you around the common areas briefly. He then takes you to an empty office and tells you to wait in there for their domestic security officer, who is currently stuck in an urgent meeting. Once he leaves, you quickly look around the room to capture everything with the button camera. Inside a cupboard is an intricate looking safe, with a password and fingerprint scan required to open it. A pneumatic tube is attached to the top, but there is no opening in the safe. As you close the cabinet and sit, the officer returns. He greets you warmly. He explains that the Swiss have developed their intelligence capabilities immensely in dealing with domestic terrorism threats, and that he can help Italy to defend themselves against domestic terror. He goes on to explain that many of the terrorists in Switzerland have fled due to police nearing in on capturing them. "All of their passports and information is stored in this safe that only I have access to. We had digital records, but the terrorists hacked into our systems and deleted everything. I still have the paper copies, so do not worry, the escapees into Italy will be identified and captured if we can reach an accord." The pneumatic system activates, and a bundle of papers is delivered to the safe. "I must open the safe, please turn around." He turns and stares at you to make sure you aren\'t looking as he inputs the code. His turn exposes the keypad, and you ensure that while your eyes are closed and head is turned, the button camera remains fixed on the safe. "Great, Carm! Now we just need his fingerprint. If you can get a piece of tape with his fingerprint we can recreate it at our hideout," says Robert.',
+        choices:[
+            {
+                text: 'Knock him out',
+                next: "knock_out"
+            },
+            {
+                text: 'Ask to see the documents',
+                next: "see_docs"
+            },
+            {
+                text: 'Wait for an opportunity',
+                next: "wait_opp"
+            },
+        ]
+    },
+
+    knock_out: {
+        chapter: "P4-1-1: Knock Him Out",
+
+        text:
+            'Once he finishes putting in the code and turns around to give his thumbprint, you hit him in the back of the head with the chair you were sitting in. Robert yelps in your ear and begins to panic. The officer is knocked unconscious and his head bleeds slightly but he is not seriously injured. You try to open the safe with his thumb, but it is covered in blood. You wipe it vigorously on his shirt then use it to open the safe. You grab all the papers and stuff them into your purse. The officer begins to stir.',
+        choices:[
+            {
+                text: 'Pretend you were both attacked by an unknown assailant',
                 next: ""
             },
             {
-                text: "Eat and inform on RaccGang",
+                text: 'Hit him again',
                 next: ""
             },
             {
-                text: "Eat and mislead them about RaccGang",
+                text: 'Run',
                 next: ""
             },
             {
-                text: "Decline to eat and stay slient",
-                next: ""
-            },
-            {
-                text: "OR: Choose your own option",
+                text: 'OR: Choose your own option',
                 next: ""
             },
         ]
     },
 
+    see_docs: {
+        chapter: "P4-1-2: Ask to See Documents",
 
+        text:
+            'The officer rubs his hands together in thought. "I am not supposed to share classified information." He finishes unlocking the safe and his face lights up. "It\'s your lucky day. The new one is special so I\'ll share it with you." He hands you a file on Robert of RaccGang. "This is a suspected terrorist mastermind. He planted a bomb in a city square, killing hundreds of humans, citing revenge against us as his motive. Now he radicalizes and misguides raccoons, recruiting them to do his bidding in the name of raccoon rights." The officer shows you a photo of Robert with a bomb in the city square.',
+        choices:[
+            {
+                text: 'Hear out Robert\'s side of the story',
+                next: ""
+            },
+            {
+                text: 'Expose Robert',
+                next: ""
+            },
+            {
+                text: 'OR: Choose your own option',
+                next: ""
+            },
+        ]
+    },
+
+    wait_opp: {
+        chapter: "P4-1-3: Wait For An Opportunity",
+
+        text:
+            'The officer presses his thumb to the reader but it does not work. He wipes his thumb on his shirt and tries again, but it fails. "This stupid thing never works... Look away again." Once again he stares at you, and he puts in a backup code to override the fingerprint requirement, which you capture with the button camera. "Perfect! Now you just need to get out of there and we can take care of the rest!" Robert exclaims. "Look at this file that just came in," says the officer. He hands you a file on Robert of RaccGang. "This is a suspected terrorist mastermind. He planted a bomb in a city square, killing hundreds of humans, citing revenge against us as his motive. Now he radicalizes and misguides raccoons, recruiting them to do his bidding in the name of raccoon rights." The officer shows you a photo of Robert with a bomb in the city square. "These are the people your country may be dealing with."',
+        choices:[
+            {
+                text: 'Hear out Robert\'s side of the story',
+                next: ""
+            },
+            {
+                text: 'Expose Robert',
+                next: ""
+            },
+            {
+                text: 'OR: Choose your own option',
+                next: ""
+            },
+        ]
+    },
 };
 
 
