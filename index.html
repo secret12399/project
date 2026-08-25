@@ -381,41 +381,8 @@ const story = {
             'The earpiece does not trigger the metal detector as you step through. An officer escorts you upstairs and shows you around the common areas briefly. He then takes you to an empty office and tells you to wait in there for their domestic security officer, who is currently stuck in an urgent meeting. Once he leaves, you quickly look around the room to capture everything with the button camera. Inside a cupboard is an intricate looking safe, with a password and fingerprint scan required to open it. A pneumatic tube is attached to the top, but there is no opening in the safe. As you close the cabinet and sit, the officer returns. He greets you warmly. He explains that the Swiss have developed their intelligence capabilities immensely in dealing with domestic terrorism threats, and that he can help Italy to defend themselves against domestic terror. He goes on to explain that many of the terrorists in Switzerland have fled due to police nearing in on capturing them. "All of their passports and information is stored in this safe that only I have access to. We had digital records, but the terrorists hacked into our systems and deleted everything. I still have the paper copies, so do not worry, the escapees into Italy will be identified and captured if we can reach an accord." The pneumatic system activates, and a bundle of papers is delivered to the safe. "I must open the safe, please turn around." He turns and stares at you to make sure you aren\'t looking as he inputs the code. His turn exposes the keypad, and you ensure that while your eyes are closed and head is turned, the button camera remains fixed on the safe. "Great, Carm! Now we just need his fingerprint. If you can get a piece of tape with his fingerprint we can recreate it at our hideout," says Robert.',
         choices:[
             {
-                text: 'Knock him out',
-                next: "knock_out"
-            },
-            {
                 text: 'Ask to see the documents',
                 next: "see_docs"
-            },
-            {
-                text: 'Wait for an opportunity',
-                next: "wait_opp"
-            },
-        ]
-    },
-
-    knock_out: {
-        chapter: "P4-1-1: Knock Him Out",
-
-        text:
-            'Once he finishes putting in the code and turns around to give his thumbprint, you hit him in the back of the head with the chair you were sitting in. Robert yelps in your ear and begins to panic. The officer is knocked unconscious and his head bleeds slightly but he is not seriously injured. You try to open the safe with his thumb, but it is covered in blood. You wipe it vigorously on his shirt then use it to open the safe. You grab all the papers and stuff them into your purse. The officer begins to stir.',
-        choices:[
-            {
-                text: 'Pretend you were both attacked by an unknown assailant',
-                next: ""
-            },
-            {
-                text: 'Hit him again',
-                next: ""
-            },
-            {
-                text: 'Run',
-                next: ""
-            },
-            {
-                text: 'OR: Choose your own option',
-                next: ""
             },
         ]
     },
@@ -428,27 +395,57 @@ const story = {
         choices:[
             {
                 text: 'Hear out Robert\'s side of the story',
-                next: ""
-            },
-            {
-                text: 'Expose Robert',
-                next: ""
-            },
-            {
-                text: 'OR: Choose your own option',
-                next: ""
+                next: "hear_rob"
             },
         ]
     },
-
-    wait_opp: {
-        chapter: "P4-1-3: Wait For An Opportunity",
+    
+    hear_rob: {
+        chapter: "P5: Hear Out Robert",
 
         text:
-            'The officer presses his thumb to the reader but it does not work. He wipes his thumb on his shirt and tries again, but it fails. "This stupid thing never works... Look away again." Once again he stares at you, and he puts in a backup code to override the fingerprint requirement, which you capture with the button camera. "Perfect! Now you just need to get out of there and we can take care of the rest!" Robert exclaims. "Look at this file that just came in," says the officer. He hands you a file on Robert of RaccGang. "This is a suspected terrorist mastermind. He planted a bomb in a city square, killing hundreds of humans, citing revenge against us as his motive. Now he radicalizes and misguides raccoons, recruiting them to do his bidding in the name of raccoon rights." The officer shows you a photo of Robert with a bomb in the city square. "These are the people your country may be dealing with."',
+            'Robert tells you that the photo is doctored. It is a piece of propaganda that has been used to frame the raccoons for a bombing that the Swiss Intelligence set up. It is from long before RaccGang or the revolution ever even existed.',
         choices:[
             {
-                text: 'Hear out Robert\'s side of the story',
+                text: 'Believe Robert',
+                next: "believe"
+            },
+            {
+                text: 'Don\'t Believe Robert',
+                next: "dont_believe"
+            },   
+        ]
+    },  
+
+    believe: {
+        chapter: "P5-1: Believe Robert",
+
+        text:
+            'The officer puts away the documents and locks the safe. As the both of you leave for the remainder of your tour, you purposefully leave your bag behind. When you run back in to grab it, you take a piece of tape from the officer\'s desk and get the fingerprint from the safe. Hearing a lot of movement, the officer opens the door, only to see you picking up your bag and heading out. He shows you more of the offices, and during the final stop he takes you underground to their holding cells. As you descend, the earpiece and camera feed to Robert are lost. The officer leads you down a murky passage leading to an enormous vault door. He enters a tiny sealed capsule and types in a password and gives a face scan. He then converses with another person who provides access once seeing that he is alone in the capsule and has given his authorization to open the vault. The door opens, revealing dozens of raccoons behind bars, looking malnourished and weak. "These are the terrorists that Italy will not have to deal with because of our efforts. They will never escape from here." Given the advanced security measures, you realize this may be your only chance to save the captive raccoons.',
+        choices:[
+            {
+                text: 'Knock Out The Officer',
+                next: ""
+            },
+            {
+                text: 'Do Nothing',
+                next: ""
+            },   
+            {
+                text: 'OR: Choose your own solution. The raccoons need you.',
+                next: ""
+            },  
+        ]
+    }, 
+
+    believe: {
+        chapter: "P5-2: Don\'t Believe Robert",
+
+        text:
+            'You see through Robert\'s lies, knowing that the Swiss Intelligence would not include manipulated and publicly available propaganda in their secure files. "Tell me more," you ask. The officer goes on to explain that the photo has been erased from every online database they have, and the only existing copy is the original in his hands, which Robert has been trying to steal and destroy for years, almost succeeding in his most recent heist attempt. It is the most important piece of evidence that will stand against him in court.',
+        choices:[
+            {
+                text: 'Leave And Deal With The Situation Privately',
                 next: ""
             },
             {
@@ -456,11 +453,15 @@ const story = {
                 next: ""
             },
             {
+                text: 'Expose Robert and RaccGang',
+                next: ""
+            },   
+            {
                 text: 'OR: Choose your own option',
                 next: ""
-            },
+            },  
         ]
-    },
+    }, 
 };
 
 
