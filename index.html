@@ -409,11 +409,7 @@ const story = {
             {
                 text: 'Believe Robert',
                 next: "believe"
-            },
-            {
-                text: 'Don\'t Believe Robert',
-                next: "dont_believe"
-            },   
+            }, 
         ]
     },  
 
@@ -422,44 +418,74 @@ const story = {
 
         text:
             'The officer puts away the documents and locks the safe. As the both of you leave for the remainder of your tour, you purposefully leave your bag behind. When you run back in to grab it, you take a piece of tape from the officer\'s desk and get the fingerprint from the safe. Hearing a lot of movement, the officer opens the door, only to see you picking up your bag and heading out. He shows you more of the offices, and during the final stop he takes you underground to their holding cells. As you descend, the earpiece and camera feed to Robert are lost. The officer leads you down a murky passage leading to an enormous vault door. He enters a tiny sealed capsule and types in a password and gives a face scan. He then converses with another person who provides access once seeing that he is alone in the capsule and has given his authorization to open the vault. The door opens, revealing dozens of raccoons behind bars, looking malnourished and weak. "These are the terrorists that Italy will not have to deal with because of our efforts. They will never escape from here." Given the advanced security measures, you realize this may be your only chance to save the captive raccoons.',
-        choices:[
+        choices:[  
             {
-                text: 'Knock Out The Officer',
-                next: ""
-            },
-            {
-                text: 'Do Nothing',
-                next: ""
-            },   
-            {
-                text: 'OR: Choose your own solution. The raccoons need you.',
-                next: ""
+                text: 'Ask to interrogate a raccoon',
+                next: "interrogate"
             },  
         ]
     }, 
 
-    dont_believe: {
-        chapter: "P5-2: Don\'t Believe Robert",
+    interrogate: {
+        chapter: "P6: Ask To Interrogate",
 
         text:
-            'You see through Robert\'s lies, knowing that the Swiss Intelligence would not include manipulated and publicly available propaganda in their secure files. "Tell me more," you ask. The officer goes on to explain that the photo has been erased from every online database they have, and the only existing copy is the original in his hands, which Robert has been trying to steal and destroy for years, almost succeeding in his most recent heist attempt. It is the most important piece of evidence that will stand against him in court.',
-        choices:[
+            'The officer looks at you skeptically but agrees. "Five minutes only." He waits by the vault door as you approach the raccoons. You approach a young, malnourished, and injured raccoon. "What\'s your name?" you ask. "I\'d never answer you!" After a moment, he continues "I\'m Boop the Shmoop. I can\'t argue or fight anymore in this state. What do you want from me?" A realization hits you. "RaccGang sent me! Coop told me about you."',
+        choices:[  
             {
-                text: 'Leave And Deal With The Situation Privately',
+                text: 'Free the raccoons',
+                next: "invisible"
+            },
+            {
+                text: 'Leave and wait for another opportunity',
+                next: "leave_prison_raccs"
+            }, 
+        ]
+    }, 
+
+    invisible: {
+        chapter: "P6-1: Free Boop",
+
+        text:
+            'Boop instructs a cellmate to make a commotion. "There aren\'t any cameras in here. The way they treat us is against international law and they don\'t want that evidence recorded. If you can get the key, we can free ourselves and they\'ll never know you did a thing." The cellmate grabs a group of raccoons and they all start making noise and banging on the cell bars. As the officer is distracted going to discipline them, you turn invisible and approach him from behind. As he approaches the bars and sticks his baton through to hit them, a raccoon bites his finger. The officer reels in horror at the possibility of being exposed to rabies. As he panics, you snatch the cell key and toss it to Boop. You return from invisibility. "We need to go! Now!" The officer begins running out of the vault, but Boop and his companions have already opened the cell and are sprinting past him. The officer pays no mind to them, as he has the bigger concern of finding medical care. You follow the officer up and out of the building. With the element of surprise and their large numbers, the raccoons all manage to escape unharmed, fueled by their hunger for freedom. You and the officer also leave the building in the commotion, with the officer abandoning you outside to go to the hospital.',
+        choices:[  
+            {
+                text: 'Return to RaccGang',
                 next: ""
             },
             {
-                text: 'Expose Robert',
+                text: 'My work is done',
                 next: ""
-            },
-            {
-                text: 'Expose Robert and RaccGang',
-                next: ""
-            },   
+            }, 
             {
                 text: 'OR: Choose your own option',
                 next: ""
-            },  
+            }, 
+        ]
+    },
+
+    leave_prison_raccs: {
+        chapter: "P6-2: Leave Boop",
+
+        text:
+            '"I will return with Coop and RaccGang. They can help me get you out safely." Boop begs you to stay, but you turn and leave with the officer. "It\'s been a pleasure having you, but I think you\'ve seen everything now." He escorts you to the exit of the building, where a security guard is waiting to check your bag and your person for classified items.',
+        choices:[
+            {
+                text: 'Turn invisible and escape',
+                next: ""
+            },
+            {
+                text: 'Allow the search',
+                next: ""
+            }, 
+            {
+                text: 'Refuse the search',
+                next: ""
+            }, 
+            {
+                text: 'OR: Choose your own option',
+                next: ""
+            }, 
         ]
     }, 
 };
