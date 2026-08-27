@@ -246,8 +246,12 @@ const story = {
 
         choices: [
             {
-                text: "Follow the Raccoon",
+                text: "Follow the raccoon",
                 next: "Raccoon"
+            },
+            {
+                text: "Skip to current",
+                next: "leave_prison_raccs"
             },
         ]
     },
@@ -433,36 +437,11 @@ const story = {
             'The officer looks at you skeptically but agrees. "Five minutes only." He waits by the vault door as you approach the raccoons. You approach a young, malnourished, and injured raccoon. "What\'s your name?" you ask. "I\'d never answer you!" After a moment, he continues "I\'m Boop the Shmoop. I can\'t argue or fight anymore in this state. What do you want from me?" A realization hits you. "RaccGang sent me! Coop told me about you."',
         choices:[  
             {
-                text: 'Free the raccoons',
-                next: "invisible"
-            },
-            {
                 text: 'Leave and wait for another opportunity',
                 next: "leave_prison_raccs"
             }, 
         ]
     }, 
-
-    invisible: {
-        chapter: "P6-1: Free Boop",
-
-        text:
-            'Boop instructs a cellmate to make a commotion. "There aren\'t any cameras in here. The way they treat us is against international law and they don\'t want that evidence recorded. If you can get the key, we can free ourselves and they\'ll never know you did a thing." The cellmate grabs a group of raccoons and they all start making noise and banging on the cell bars. As the officer is distracted going to discipline them, you turn invisible and approach him from behind. As he approaches the bars and sticks his baton through to hit them, a raccoon bites his finger. The officer reels in horror at the possibility of being exposed to rabies. As he panics, you snatch the cell key and toss it to Boop. You return from invisibility. "We need to go! Now!" The officer begins running out of the vault, but Boop and his companions have already opened the cell and are sprinting past him. The officer pays no mind to them, as he has the bigger concern of finding medical care. You follow the officer up and out of the building. With the element of surprise and their large numbers, the raccoons all manage to escape unharmed, fueled by their hunger for freedom. You and the officer also leave the building in the commotion, with the officer abandoning you outside to go to the hospital.',
-        choices:[  
-            {
-                text: 'Return to RaccGang',
-                next: ""
-            },
-            {
-                text: 'My work is done',
-                next: ""
-            }, 
-            {
-                text: 'OR: Choose your own option',
-                next: ""
-            }, 
-        ]
-    },
 
     leave_prison_raccs: {
         chapter: "P6-2: Leave Boop",
@@ -471,24 +450,56 @@ const story = {
             '"I will return with Coop and RaccGang. They can help me get you out safely." Boop begs you to stay, but you turn and leave with the officer. "It\'s been a pleasure having you, but I think you\'ve seen everything now." He escorts you to the exit of the building, where a security guard is waiting to check your bag and your person for classified items.',
         choices:[
             {
-                text: 'Turn invisible and escape',
-                next: ""
-            },
-            {
-                text: 'Allow the search',
-                next: ""
-            }, 
-            {
-                text: 'Refuse the search',
-                next: ""
-            }, 
-            {
-                text: 'OR: Choose your own option',
-                next: ""
+                text: 'Allow the search and inquire about prisoner cameras',
+                next: "inq_cams"
             }, 
         ]
     }, 
+
+    inq_cams: {
+        chapter: "P7: Allow Search and Inquire About Cameras",
+
+        text:
+            'You allow the search. A male guard searches your bag, while a woman is called over to pat you down. She finds nothing on you, given that the button camera is well disguised and the earpiece is small. The male guard picks through your bag. The tape sticks to his finger so he throws it out, then hands your bag back, finding no contraband to his knowledge. "I didn\'t see any cameras in the vault with the prisoners," you note to the officer. "I think Italy would like access to a feed with the prisoners visible for our defence officials\' records. At least for a week or so to understand how they behave and their risks." The officer looks at you skeptically. "No, there are no cameras there. Given that our systems have already been hacked multiple times by the raccoons, we cannot install cameras. We used to have them, but the terrorists on the outside hacked into the feeds and received sign language messages from the prisoners. With this information, they nearly infiltrated the holding area and freed the prisoners. We luckily noticed and chased them off. This is also why the new vault door and nearly unbreakable security measures were added."',
+        choices:[
+            {
+                text: 'Insist on installing cameras',
+                next: "install_cams"
+            }, 
+            {
+                text: 'Depart and return to RaccGang',
+                next: "depart"
+            },
+        ]
+    }, 
+
+    install_cams: {
+        chapter: "P7-2: Insist On Installing Cameras",
+
+        text:
+            '"Italy simply cannot comply with your request for sharing of information if we can\'t at least know who our enemies are. Install cameras or we will not support Switzerland in this plight." The officer is slightly angered but ponders your request. "Fine. We will find a way to install cameras without compromising our security and we will update you when they are in."',
+        choices:[
+            {
+                text: 'Depart and return to RaccGang (specify on form if this route was taken)',
+                next: "depart"
+            }, 
+        ]
+    }, 
+
+    depart: {
+        chapter: "P7-F: Depart and Return to RaccGang",
+
+        text:
+            'Robert finally returns to your ear. "Sorry Carm when we lost connection we stepped away from our feed and started planning what to do to get you out of that building." You inform Robert through the earpiece that you are returning to the hideout. He instructs you to ensure that you are not followed. Therefore, you take an unorthodox route through the streets of Switzerland, and once certain that you are not being followed, you return to the hideout below the cafe. Coop, Robert, and all the other raccoons welcome you back warmly with pastries and iced coffee. You sit and begin to debrief. You consider all the information you gained from the excursion and choose what to share with the raccoons.',
+        choices:[
+            {
+                text: 'Choose your own response.',
+                next: ""
+            }, 
+        ]
+    },
 };
+    
 
 
 let history = [];
