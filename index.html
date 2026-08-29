@@ -251,7 +251,7 @@ const story = {
             },
             {
                 text: "Skip to current",
-                next: "leave_prison_raccs"
+                next: "depart"
             },
         ]
     },
@@ -466,10 +466,6 @@ const story = {
                 text: 'Insist on installing cameras',
                 next: "install_cams"
             }, 
-            {
-                text: 'Depart and return to RaccGang',
-                next: "depart"
-            },
         ]
     }, 
 
@@ -480,7 +476,7 @@ const story = {
             '"Italy simply cannot comply with your request for sharing of information if we can\'t at least know who our enemies are. Install cameras or we will not support Switzerland in this plight." The officer is slightly angered but ponders your request. "Fine. We will find a way to install cameras without compromising our security and we will update you when they are in."',
         choices:[
             {
-                text: 'Depart and return to RaccGang (specify on form if this route was taken)',
+                text: 'Depart and return to RaccGang',
                 next: "depart"
             }, 
         ]
@@ -493,9 +489,67 @@ const story = {
             'Robert finally returns to your ear. "Sorry Carm when we lost connection we stepped away from our feed and started planning what to do to get you out of that building." You inform Robert through the earpiece that you are returning to the hideout. He instructs you to ensure that you are not followed. Therefore, you take an unorthodox route through the streets of Switzerland, and once certain that you are not being followed, you return to the hideout below the cafe. Coop, Robert, and all the other raccoons welcome you back warmly with pastries and iced coffee. You sit and begin to debrief. You consider all the information you gained from the excursion and choose what to share with the raccoons.',
         choices:[
             {
-                text: 'Choose your own response.',
+                text: 'Share what you know',
+                next: "share"
+            }, 
+        ]
+    },
+    
+    share: {
+        chapter: "P8: Debrief With RaccGang",
+
+        text:
+            '"The tape was seized by the guards. I instructed them to add cameras to the holding cells of the raccoons, and they reluctantly agreed and will share the feeds with me." RaccGang is disappointed to hear about the tape, but knowing that they will see their friends and get information on their substandard conditions excites them. "Robert, tell me more about that photo of you with a bomb that they showed me." The other raccoons are surprised to hear of this photo. "As I mentioned before, this was an old photo from far before the revolution. It was an edited photo used in their initial run of propaganga against raccoons. It stoked hatred against us, making me their public enemy. Following the bombing, I was hated by humans and raccoons alike. It was horrible and I felt so alone. I vowed to hack and destroy all copies of this propaganda. I worked with a few raccoons who knew me well enough to know my innocence and we managed to wipe almost every copy. After that, we dedicated our lives to fighting for the rights of raccoons. This is the origin of RaccGang, previously known only to myself and the other founders, but now to all of you."',
+        choices:[
+            {
+                text: 'Continue the plot to save the raccoons',
+                next: "cont_plot"
+            }, 
+            {
+                text: 'Challenge Robert',
+                next: "press_x"
+            },  
+        ]
+    },
+    cont_plot: {
+        chapter: "P8-1: Continue The Plot",
+
+        text:
+            'Coop covers the next steps with you. "Ok Carm. We have two things to do. First, find another way into the safe. Second, free the prisoners. The second has to wait until we have the camera footage from that officer. As for the first, we have a few ideas. We can plant a bomb in the pneumatic ducts connected to the safe. However, we will also need to be able to activate the pneumatic system to deliver the bomb and for the safe to open for it. If the bomb detonates early or collides with any object that triggers the explosion, we will be found out and the plan is foiled. Alternatively, we can contract a squirrel we know to infiltrate the duct and steal the files. This removes the explosion risk, but we will still need to activate the pneumatics. It also runs the risk of him getting stuck inside if we can\'t activate the pneumatics again on his way out. However, this does provide much more flexibility with timing and ensuring that all documents are accounted for. We also learned that the fingerprint sensor on the safe is far more sophisticated than we thought. It checks for temperature, shape, perspiration, and faint ripples from heartbeats. If any of these are out of the ordinary, it will not work. If we want to access the safe from the door, we cannot coerce the officer. Instead, we can send in fake evidence of raccoon crimes. When it ends up being sent to the safe, we can infiltrate and capture the documents as he opens it. For this option we must be extremely precise in our timing, and strike carefully."',
+        choices:[
+            {
+                text: 'Send the bomb',
                 next: ""
             }, 
+            {
+                text: 'Contract the squirrel',
+                next: ""
+            },  
+            {
+                text: 'Plant false evidence',
+                next: ""
+            },  
+            {
+                text: 'OR: Choose your own option',
+                next: ""
+            }, 
+        ]
+    },
+
+    press_x: {
+        chapter: "P8-2: Challenge Robert",
+
+        text:
+            '"I don\'t believe you. These raccoons were surprised. Why did you never speak of this with them before?" The raccoons agree and become skeptical but are willing to hear Robert out. Robert is offended by your doubt. "I was ashamed to have been the face of the hatred against raccoons. I was hated by a generation of humans and many of the raccoons of my time. Once the photos were deleted, I chose not to bring them up again, ever. I didn\'t want to relive those nightmares. I\'m sorry and I truly should have been honest with each and every one of you. I hope you can show me the grace of accepting my apology." The raccoons seem satisfied by his answer',
+        choices:[
+            {
+                text: 'Forgive Robert',
+                next: ""
+            }, 
+            {
+                text: 'OR: Provide at least one reason to doubt Robert further',
+                next: ""
+            },  
         ]
     },
 };
