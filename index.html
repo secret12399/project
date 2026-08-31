@@ -251,7 +251,7 @@ const story = {
             },
             {
                 text: "Skip to current",
-                next: "depart"
+                next: "cont_plot"
             },
         ]
     },
@@ -511,6 +511,7 @@ const story = {
             },  
         ]
     },
+    
     cont_plot: {
         chapter: "P8-1: Continue The Plot",
 
@@ -518,36 +519,70 @@ const story = {
             'Coop covers the next steps with you. "Ok Carm. We have two things to do. First, find another way into the safe. Second, free the prisoners. The second has to wait until we have the camera footage from that officer. As for the first, we have a few ideas. We can plant a bomb in the pneumatic ducts connected to the safe. However, we will also need to be able to activate the pneumatic system to deliver the bomb and for the safe to open for it. If the bomb detonates early or collides with any object that triggers the explosion, we will be found out and the plan is foiled. Alternatively, we can contract a squirrel we know to infiltrate the duct and steal the files. This removes the explosion risk, but we will still need to activate the pneumatics. It also runs the risk of him getting stuck inside if we can\'t activate the pneumatics again on his way out. However, this does provide much more flexibility with timing and ensuring that all documents are accounted for. We also learned that the fingerprint sensor on the safe is far more sophisticated than we thought. It checks for temperature, shape, perspiration, and faint ripples from heartbeats. If any of these are out of the ordinary, it will not work. If we want to access the safe from the door, we cannot coerce the officer. Instead, we can send in fake evidence of raccoon crimes. When it ends up being sent to the safe, we can infiltrate and capture the documents as he opens it. For this option we must be extremely precise in our timing, and strike carefully."',
         choices:[
             {
-                text: 'Send the bomb',
-                next: ""
-            }, 
-            {
-                text: 'Contract the squirrel',
-                next: ""
-            },  
-            {
                 text: 'Plant false evidence',
+                next: "plant_file"
+            },  
+        ]
+    },
+    
+    plant_file: {
+        chapter: "P9: Plant False Evidence",
+
+        text:
+            'Coop reasons that the new evidence must be extremely enticing to make sure the officer opens the safe right away to look at it. He proposes that you plant evidence of the location of RaccGang\'s hideout. Robert agrees and says that he will take some raccoons and set up a fake hideout in an abandoned building a few kilometers away. Coop argues that we should subtly lead the police to the fake hideout to make things more believable. Robert belives that sending an anonymous tip will suffice and it is not worth the risk of a raccoon being caught when they can always find another way after if it doesn\'t work.',
+        choices:[
+            {
+                text: 'Support Coop',
+                next: "coop_plan"
+            },  
+            {
+                text: 'Support Robert',
+                next: "robs_plan"
+            },  
+        ]
+    },
+    
+    coop_plan: {
+        chapter: "P9-1: Support Coop",
+
+        text:
+            'Robert is upset that you and Coop didn\'t go along with his plan. However, he does not stop you two from carrying out the next steps. Coop takes the lead and tells you that the plan is to hack into the Swiss Intelligence website, and before logging off, turn off the VPN momentarily. The hacker\'s location will be pinged and tracked. The hackcoon will stay far ahead of the police so they don\'t know that he knows he\'s being followed, and will lead the police back to Robert\'s fake hideout. After heading down, the police may follow momentarily, but upon realizing it\'s a base of operations, will pull back and return with reinforcements. Meanwhile, the hackcoon will have a tunnel large enough for him to scurry through, but far too small for a human, to get out safely.',
+        choices:[
+            {
+                text: 'Go ahead with Coop\'s plan',
                 next: ""
             },  
             {
-                text: 'OR: Choose your own option',
+                text: 'Suggest a different plan',
                 next: ""
-            }, 
+            },  
+            {
+                text: 'AND: How is the story going? Do you enjoy it? Give advice in the form if desired please',
+                next: ""
+            },  
         ]
     },
 
-    press_x: {
-        chapter: "P8-2: Challenge Robert",
+    plant_file: {
+        chapter: "P9-2: Support Robert",
 
         text:
-            '"I don\'t believe you. These raccoons were surprised. Why did you never speak of this with them before?" The raccoons agree and become skeptical but are willing to hear Robert out. Robert is offended by your doubt. "I was ashamed to have been the face of the hatred against raccoons. I was hated by a generation of humans and many of the raccoons of my time. Once the photos were deleted, I chose not to bring them up again, ever. I didn\'t want to relive those nightmares. I\'m sorry and I truly should have been honest with each and every one of you. I hope you can show me the grace of accepting my apology." The raccoons seem satisfied by his answer',
+            'Coop is a bit skeptical but happily goes along with the plan. You, Coop, Robert, and a few other raccoons go to the baement of the abandoned building and start to draft fake plans, put together meeting rooms, set up computers, and make the space look lived in. Robert suggests fabricating plans of a large coup at the Federal Palace of Switzerland, which may divert police from the Swiss Intelligence building. Coop worries that this instability may make the heist more prone to unforeseen complications.',
         choices:[
             {
-                text: 'Forgive Robert',
+                text: 'Go ahead with Robert\'s plan',
                 next: ""
-            }, 
+            },  
             {
-                text: 'OR: Provide at least one reason to doubt Robert further',
+                text: 'Go ahead, but without the palace distraction',
+                next: ""
+            },  
+            {
+                text: 'Suggest a different plan',
+                next: ""
+            },  
+            {
+                text: 'AND: How is the story going? Do you enjoy it? Give advice in the form if desired please',
                 next: ""
             },  
         ]
