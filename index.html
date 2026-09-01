@@ -251,7 +251,7 @@ const story = {
             },
             {
                 text: "Skip to current",
-                next: "cont_plot"
+                next: "robs_plan"
             },
         ]
     },
@@ -532,59 +532,81 @@ const story = {
             'Coop reasons that the new evidence must be extremely enticing to make sure the officer opens the safe right away to look at it. He proposes that you plant evidence of the location of RaccGang\'s hideout. Robert agrees and says that he will take some raccoons and set up a fake hideout in an abandoned building a few kilometers away. Coop argues that we should subtly lead the police to the fake hideout to make things more believable. Robert belives that sending an anonymous tip will suffice and it is not worth the risk of a raccoon being caught when they can always find another way after if it doesn\'t work.',
         choices:[
             {
-                text: 'Support Coop',
-                next: "coop_plan"
-            },  
-            {
                 text: 'Support Robert',
                 next: "robs_plan"
             },  
         ]
     },
     
-    coop_plan: {
-        chapter: "P9-1: Support Coop",
-
-        text:
-            'Robert is upset that you and Coop didn\'t go along with his plan. However, he does not stop you two from carrying out the next steps. Coop takes the lead and tells you that the plan is to hack into the Swiss Intelligence website, and before logging off, turn off the VPN momentarily. The hacker\'s location will be pinged and tracked. The hackcoon will stay far ahead of the police so they don\'t know that he knows he\'s being followed, and will lead the police back to Robert\'s fake hideout. After heading down, the police may follow momentarily, but upon realizing it\'s a base of operations, will pull back and return with reinforcements. Meanwhile, the hackcoon will have a tunnel large enough for him to scurry through, but far too small for a human, to get out safely.',
-        choices:[
-            {
-                text: 'Go ahead with Coop\'s plan',
-                next: ""
-            },  
-            {
-                text: 'Suggest a different plan',
-                next: ""
-            },  
-            {
-                text: 'AND: How is the story going? Do you enjoy it? Give advice in the form if desired please',
-                next: ""
-            },  
-        ]
-    },
-
     robs_plan: {
         chapter: "P9-2: Support Robert",
 
         text:
             'Coop is a bit skeptical but happily goes along with the plan. You, Coop, Robert, and a few other raccoons go to the baement of the abandoned building and start to draft fake plans, put together meeting rooms, set up computers, and make the space look lived in. Robert suggests fabricating plans of a large coup at the Federal Palace of Switzerland, which may divert police from the Swiss Intelligence building. Coop worries that this instability may make the heist more prone to unforeseen complications.',
-        choices:[
+        choices:[ 
             {
-                text: 'Go ahead with Robert\'s plan',
+                text: 'Suggest hiding plans regarding Italy to get you involved',
+                next: "suggest_plan"
+            },  
+        ]
+    },
+
+    suggest_plan: {
+        chapter: "P10: Suggest Italy Evidence",
+
+        text:
+            'You suggest to instead plant evidence regarding the location of raccoon hideouts in Italy, in hopes of the Swiss contacting you to join their investigation. "Good idea," says Robert. "This way you can also ask the officer to open the safe to show you the information." In a locked filing cabinet, locations of false raccoon hideouts in Italy are listed. You and Coop depart and head back to the cafe hideout, while Robert and his helpers will spend the next day or two making the hideout look legitimate, then call in a false tip from a bystander who supposedly saw multiple raccoons scurrying into an underground bunker. Back at the cafe hideout, Coop offers you a small concealable pistol to defend yourself if needed. The gun is legal for Ella as a diplomat, but illegal for Carmela as a tourist.',
+        choices:[ 
+            {
+                text: 'Accept the gun',
+                next: "accept_gun"
+            },  
+            {
+                text: 'Decline the gun',
+                next: "decline_gun"
+            },  
+        ]
+    },
+    
+    accept_gun: {
+        chapter: "P10-1: Accept The Gun",
+
+        text:
+            'You decide that your forged documents and the utility of the gun make it worth any small risks associated with carrying it. After taking the gun, you receive a call from an unknown number. The voice on the other end is the officer. "Your cameras have been installed and are now running. Tomorrow at 6pm we will deliver 24 hours of recorded footage. Given the high risk of hackers, we decided to use physical film. The films are to be delivered via an armoured truck. They will have a small detonator inside, one of which is held by myself, and another by the driver of the truck. When triggered, mildly corrosive dye packs will destroy the film. Not to worry, however, as the dye will not harm you if it touches you. This is to ensure raccoons do not get a hold of this film. We will deliver the tapes to the Italian embassy, and the Italian embassy only. For security this must be the case and we absolutely will not compromise on this, although I\'m sure you don\'t mind as you diplomats spend most of your time at the embassy regardless. Once delivered, you will be given possession of the second detonator and mine will be deactivated." The officer hangs up. You and Coop recognize that you must intercept the tapes before they arrive at the embassy. Coop thinks aloud. "Ok so we have a big problem, the tapes can\'t arrive at the embassy because they won\'t know who you are. We need to steal the tapes such that they don\'t arrive at the embassy, but also make sure they aren\'t destroyed. Of these two problems, making sure your cover isn\'t exposed by delivering them to the embassy is probably the priority. But ideally we\'ll be able to do both. Option one is that we can infiltrate the back of the truck and steal the tapes, but they\'ll be destroyed by the dye. Alternatively, we can infiltrate the cab of the truck and incapacitate the drivers. However, we\'d need to make sure that they can\'t trigger the detonator or call in the attack to their base. Also, while we copy the tapes we\'d need to drive the regular route of the truck. If they see us go off track, they\'ll destroy the tapes. It\'s doable with our expertise. It\'s up to you if the information we could get is worth the risk. In addition to helping us scout out the prisoners, the tapes could change the public sentiment on raccoons."',
+        choices:[ 
+            {
+                text: 'Play it safe',
                 next: ""
             },  
             {
-                text: 'Go ahead, but without the palace distraction',
+                text: 'Take the risk',
                 next: ""
             },  
             {
-                text: 'Suggest a different plan',
+                text: 'OR: Choose your own option',
+                next: ""
+            }, 
+        ]
+    },
+    
+    decline_gun: {
+        chapter: "P10: Decline The Gun",
+
+        text:
+            'You decide that the utility of the gun is not enough to risk being caught with it as Carmela. Soon after, you receive a call from an unknown number. The voice on the other end is the officer. "Your cameras have been installed and are now running. Tomorrow at 6pm we will deliver 24 hours of recorded footage. Given the high risk of hackers, we decided to use physical film. The films are to be delivered via an armoured truck. They will have a small detonator inside, one of which is held by myself, and another by the driver of the truck. When triggered, mildly corrosive dye packs will destroy the film. Not to worry, however, as the dye will not harm you if it touches you. This is to ensure raccoons do not get a hold of this film. We will deliver the tapes to the Italian embassy, and the Italian embassy only. For security this must be the case and we absolutely will not compromise on this, although I\'m sure you don\'t mind as you diplomats spend most of your time at the embassy regardless. Once delivered, you will be given possession of the second detonator and mine will be deactivated." The officer hangs up. You and Coop recognize that you must intercept the tapes before they arrive at the embassy. Coop thinks aloud. "Ok so we have a big problem, the tapes can\'t arrive at the embassy because they won\'t know who you are. We need to steal the tapes such that they don\'t arrive at the embassy, but also make sure they aren\'t destroyed. Of these two problems, making sure your cover isn\'t exposed by delivering them to the embassy is probably the priority. But ideally we\'ll be able to do both. Option one is that we can infiltrate the back of the truck and steal the tapes, but they\'ll be destroyed by the dye. Alternatively, we can infiltrate the cab of the truck and incapacitate the drivers. However, we\'d need to make sure that they can\'t trigger the detonator or call in the attack to their base. Also, while we copy the tapes we\'d need to drive the regular route of the truck. If they see us go off track, they\'ll destroy the tapes. It\'s doable with our expertise. It\'s up to you if the information we could get is worth the risk. In addition to helping us scout out the prisoners, the tapes could change the public sentiment on raccoons."',
+        choices:[ 
+            {
+                text: 'Play it safe',
                 next: ""
             },  
             {
-                text: 'AND: How is the story going? Do you enjoy it? Give advice in the form if desired please',
+                text: 'Take the risk',
                 next: ""
             },  
+            {
+                text: 'OR: Choose your own option',
+                next: ""
+            }, 
         ]
     },
 };
