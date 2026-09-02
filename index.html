@@ -251,7 +251,7 @@ const story = {
             },
             {
                 text: "Skip to current",
-                next: "robs_plan"
+                next: "decline_gun"
             },
         ]
     },
@@ -568,18 +568,48 @@ const story = {
         ]
     },
     
-    accept_gun: {
-        chapter: "P10-1: Accept The Gun",
+    decline_gun: {
+        chapter: "P10-2: Decline The Gun",
 
         text:
-            'You decide that your forged documents and the utility of the gun make it worth any small risks associated with carrying it. After taking the gun, you receive a call from an unknown number. The voice on the other end is the officer. "Your cameras have been installed and are now running. Tomorrow at 6pm we will deliver 24 hours of recorded footage. Given the high risk of hackers, we decided to use physical film. The films are to be delivered via an armoured truck. They will have a small detonator inside, one of which is held by myself, and another by the driver of the truck. When triggered, mildly corrosive dye packs will destroy the film. Not to worry, however, as the dye will not harm you if it touches you. This is to ensure raccoons do not get a hold of this film. We will deliver the tapes to the Italian embassy, and the Italian embassy only. For security this must be the case and we absolutely will not compromise on this, although I\'m sure you don\'t mind as you diplomats spend most of your time at the embassy regardless. Once delivered, you will be given possession of the second detonator and mine will be deactivated." The officer hangs up. You and Coop recognize that you must intercept the tapes before they arrive at the embassy. Coop thinks aloud. "Ok so we have a big problem, the tapes can\'t arrive at the embassy because they won\'t know who you are. We need to steal the tapes such that they don\'t arrive at the embassy, but also make sure they aren\'t destroyed. Of these two problems, making sure your cover isn\'t exposed by delivering them to the embassy is probably the priority. But ideally we\'ll be able to do both. Option one is that we can infiltrate the back of the truck and steal the tapes, but they\'ll be destroyed by the dye. Alternatively, we can infiltrate the cab of the truck and incapacitate the drivers. However, we\'d need to make sure that they can\'t trigger the detonator or call in the attack to their base. Also, while we copy the tapes we\'d need to drive the regular route of the truck. If they see us go off track, they\'ll destroy the tapes. It\'s doable with our expertise. It\'s up to you if the information we could get is worth the risk. In addition to helping us scout out the prisoners, the tapes could change the public sentiment on raccoons."',
+            'You decide that the utility of the gun is not enough to risk being caught with it as Carmela. Soon after, you receive a call from an unknown number. The voice on the other end is the officer. "Your cameras have been installed and are now running. Tomorrow at 6pm we will deliver 24 hours of recorded footage. Given the high risk of hackers, we decided to use physical film. The films are to be delivered via an armoured truck. They will have a small detonator inside, one of which is held by myself, and another by the driver of the truck. When triggered, mildly corrosive dye packs will destroy the film. Not to worry, however, as the dye will not harm you if it touches you. This is to ensure raccoons do not get a hold of this film. We will deliver the tapes to the Italian embassy, and the Italian embassy only. For security this must be the case and we absolutely will not compromise on this, although I\'m sure you don\'t mind as you diplomats spend most of your time at the embassy regardless. Once delivered, you will be given possession of the second detonator and mine will be deactivated." The officer hangs up. You and Coop recognize that you must intercept the tapes before they arrive at the embassy. Coop thinks aloud. "Ok so we have a big problem, the tapes can\'t arrive at the embassy because they won\'t know who you are. We need to steal the tapes such that they don\'t arrive at the embassy, but also make sure they aren\'t destroyed. Of these two problems, making sure your cover isn\'t exposed by delivering them to the embassy is probably the priority. But ideally we\'ll be able to do both. Option one is that we can infiltrate the back of the truck and steal the tapes, but they\'ll be destroyed by the dye. Alternatively, we can infiltrate the cab of the truck and incapacitate the drivers. However, we\'d need to make sure that they can\'t trigger the detonator or call in the attack to their base. Also, while we copy the tapes we\'d need to drive the regular route of the truck. If they see us go off track, they\'ll destroy the tapes. It\'s doable with our expertise. It\'s up to you if the information we could get is worth the risk. In addition to helping us scout out the prisoners, the tapes could change the public sentiment on raccoons."',
         choices:[ 
             {
-                text: 'Play it safe',
+                text: 'Take the risk',
+                next: "take_risk"
+            },  
+        ]
+    },
+    
+    take_risk: {
+        chapter: "P11: Take The Risk",
+
+        text:
+            'The final arrangements are made over the coming hours. At 5pm the next day, a few ranger raccoons depart to incercept the truck. You and Coop monitor them via earpieces and body cameras from the hideout. The rangers wait on a low rooftop down the street from the intelligence building from which the truck will depart. They grapple on to the roof of the truck as it passes by. One raccoon stands ready on top of the back of the truck with a laser to cut through and drop in. Two more raccoons stand on either side of the cab holding explosives, ready to infiltrate the cab. They rappel off the side of the truck, tossing the explosives to shatter the reinforced windows, and kick the guards in the head as they swing in. The guards are knocked unconscious then restrained and the rangers take control of the vehicle, continuing to follow the route. The ranger on the back of the truck cuts into the van and begins copying the tape. Twenty minutes later, he is finished copying and hops out of the truck to return to the hideout. The rangers in the front drive up the street and park the truck then get out. As they\'re running, the two raccoons are tased in the back and arrested by a guard that managed to escape his restraints. The raccoon with the tape makes it out safely. "Oh no. Those poor guys are going to be tortured if we don\'t help. Should we tell the third ranger to stash the tape and run back to help them? We don\'t have much time," says Coop.',
+        choices:[ 
+            {
+                text: 'Send help',
+                next: "send_help"
+            },  
+            {
+                text: 'Regroup and continue with the plan',
+                next: "regroup"
+            },  
+        ]
+    },
+
+    send_help: {
+        chapter: "P11-1: Send Help",
+
+        text:
+            'You command the third raccoon to stash the tape wherever he can and head back to help his comrades. He does as instructed, and finds the guards carrying the unconscious rangers into the truck. He tosses a concussive grenade that disorients the guards and he quickly tases them then knocks them out with a baton. As he moves to collect his fellow rangers, he is surrounded and arrested by police that were called in for backup. "This was a bad idea. We don\'t have any more rangers for the heist. Our offensive and stealth capabilities are going to be severly hindered," says Coop. You send a raccoon to retrieve the tape and play it. The feed shows the skinny raccoons in their cells. Coop steps away, as he cannot stomach seeing the conditions his friends might be in. Suprisingly, the raccoons are offered high quality food, which they all decline to eat, and inside the cells are new beds that have been torn up and CD players that have been smashed. It appears that the officers have created the illusion of decent conditions squandered by the raccoons, to avoid any possible penalties for violations of rights on the tapes. You and a few other raccoons scour the tapes for hours, but can\'t find anything that might help with the heist. Robert returns to the hideout. "Some others are finishing up at the fake hideout. I\'m calling in the tip in an hour. It\'ll take a while for them to find the plans to send up to the safe. In the meantime, without the rangers the risk of infiltrating is high. Carm, I suggest that given the interception of the tapes, you call in and ask to see them at the intelligence building. Once you have access, you can find a way to unlock a door for us. We also have no way of getting those prisoners out without more information. We might need you to find out what you can so we can improvise. Otherwise, we can take our chances with using thermite."',
+        choices:[ 
+            {
+                text: 'Infiltrate as Ella',
                 next: ""
             },  
             {
-                text: 'Take the risk',
+                text: 'Use thermite',
                 next: ""
             },  
             {
@@ -589,18 +619,18 @@ const story = {
         ]
     },
     
-    decline_gun: {
-        chapter: "P10: Decline The Gun",
+    regroup: {
+        chapter: "P11-2: Continue With The Plan",
 
         text:
-            'You decide that the utility of the gun is not enough to risk being caught with it as Carmela. Soon after, you receive a call from an unknown number. The voice on the other end is the officer. "Your cameras have been installed and are now running. Tomorrow at 6pm we will deliver 24 hours of recorded footage. Given the high risk of hackers, we decided to use physical film. The films are to be delivered via an armoured truck. They will have a small detonator inside, one of which is held by myself, and another by the driver of the truck. When triggered, mildly corrosive dye packs will destroy the film. Not to worry, however, as the dye will not harm you if it touches you. This is to ensure raccoons do not get a hold of this film. We will deliver the tapes to the Italian embassy, and the Italian embassy only. For security this must be the case and we absolutely will not compromise on this, although I\'m sure you don\'t mind as you diplomats spend most of your time at the embassy regardless. Once delivered, you will be given possession of the second detonator and mine will be deactivated." The officer hangs up. You and Coop recognize that you must intercept the tapes before they arrive at the embassy. Coop thinks aloud. "Ok so we have a big problem, the tapes can\'t arrive at the embassy because they won\'t know who you are. We need to steal the tapes such that they don\'t arrive at the embassy, but also make sure they aren\'t destroyed. Of these two problems, making sure your cover isn\'t exposed by delivering them to the embassy is probably the priority. But ideally we\'ll be able to do both. Option one is that we can infiltrate the back of the truck and steal the tapes, but they\'ll be destroyed by the dye. Alternatively, we can infiltrate the cab of the truck and incapacitate the drivers. However, we\'d need to make sure that they can\'t trigger the detonator or call in the attack to their base. Also, while we copy the tapes we\'d need to drive the regular route of the truck. If they see us go off track, they\'ll destroy the tapes. It\'s doable with our expertise. It\'s up to you if the information we could get is worth the risk. In addition to helping us scout out the prisoners, the tapes could change the public sentiment on raccoons."',
+            '"They\'ve certainly already called for backup. There\'s nothing we can do now," you say. The third ranger returns with the tape. "Let\'s just hope this shows us something that makes it worth our losses," says Coop. The feed shows the skinny raccoons in their cells. Coop steps away and goes to the cafe, as he cannot stomach seeing the conditions his friends might be in. Suprisingly, the raccoons are offered high quality food, which they all decline to eat, and inside the cells are new beds that have been torn up and CD players that have been smashed. It appears that the officers have created the illusion of decent conditions squandered by the raccoons, to avoid any possible penalties for violations of rights on the tapes. After watching on high speed for a few hours, the ranger perks up. "Look at that raccoon in the corner. He\'s giving a message through Racc Code. They taught it to us in the army. He\'s signing numbers... they must\'ve made a radio with the CD player parts!" You tune the radio to the station that he indicated, and you manage to get into contact with the raccoons. They tell you that they can help to create a diversion if needed, and that they have many trained rangers that can help with the heist if you get them first. From tossing parts against the walls, they noted that the south wall is thin and there may be a breach point that can be opened with an explosive device. After consulting a map, it appears that the south wall is connected to their server rooms. Robert returns to the hideout. "Some others are finishing up at the fake hideout. I\'m calling in the tip in an hour. It\'ll take a while for them to find the plans to send up to the safe. This is good news about the prisoners. We will keep in contact with them during the heist. As for that wall, an explosion in the server room is perfect, as long as we\'re discreet, it can appear as though it was an equipment malfunction. We can maintain complete anonymity throughout the heist. Carm, I suggest that given the interception of the tapes, you call in and ask to see them at the intelligence building. Once you have access, you can find a way to unlock a door for us. After that, you can leave and we\'ll take care of the rest. Alternatively, we still have some ranger expertise and can use thermite to get into the building. As long as the timing is right, we can intercept the safe with no problems. The timing on the second will need to be slightly more precise since you might be able to delay the officer in the first case, but I see no problems with the latter, Carm."',
         choices:[ 
             {
-                text: 'Play it safe',
+                text: 'Infiltrate as Ella',
                 next: ""
             },  
             {
-                text: 'Take the risk',
+                text: 'Use thermite',
                 next: ""
             },  
             {
