@@ -251,7 +251,7 @@ const story = {
             },
             {
                 text: "Skip to current",
-                next: "decline_gun"
+                next: "regroup"
             },
         ]
     },
@@ -588,34 +588,9 @@ const story = {
             'The final arrangements are made over the coming hours. At 5pm the next day, a few ranger raccoons depart to incercept the truck. You and Coop monitor them via earpieces and body cameras from the hideout. The rangers wait on a low rooftop down the street from the intelligence building from which the truck will depart. They grapple on to the roof of the truck as it passes by. One raccoon stands ready on top of the back of the truck with a laser to cut through and drop in. Two more raccoons stand on either side of the cab holding explosives, ready to infiltrate the cab. They rappel off the side of the truck, tossing the explosives to shatter the reinforced windows, and kick the guards in the head as they swing in. The guards are knocked unconscious then restrained and the rangers take control of the vehicle, continuing to follow the route. The ranger on the back of the truck cuts into the van and begins copying the tape. Twenty minutes later, he is finished copying and hops out of the truck to return to the hideout. The rangers in the front drive up the street and park the truck then get out. As they\'re running, the two raccoons are tased in the back and arrested by a guard that managed to escape his restraints. The raccoon with the tape makes it out safely. "Oh no. Those poor guys are going to be tortured if we don\'t help. Should we tell the third ranger to stash the tape and run back to help them? We don\'t have much time," says Coop.',
         choices:[ 
             {
-                text: 'Send help',
-                next: "send_help"
-            },  
-            {
                 text: 'Regroup and continue with the plan',
                 next: "regroup"
             },  
-        ]
-    },
-
-    send_help: {
-        chapter: "P11-1: Send Help",
-
-        text:
-            'You command the third raccoon to stash the tape wherever he can and head back to help his comrades. He does as instructed, and finds the guards carrying the unconscious rangers into the truck. He tosses a concussive grenade that disorients the guards and he quickly tases them then knocks them out with a baton. As he moves to collect his fellow rangers, he is surrounded and arrested by police that were called in for backup. "This was a bad idea. We don\'t have any more rangers for the heist. Our offensive and stealth capabilities are going to be severly hindered," says Coop. You send a raccoon to retrieve the tape and play it. The feed shows the skinny raccoons in their cells. Coop steps away, as he cannot stomach seeing the conditions his friends might be in. Suprisingly, the raccoons are offered high quality food, which they all decline to eat, and inside the cells are new beds that have been torn up and CD players that have been smashed. It appears that the officers have created the illusion of decent conditions squandered by the raccoons, to avoid any possible penalties for violations of rights on the tapes. You and a few other raccoons scour the tapes for hours, but can\'t find anything that might help with the heist. Robert returns to the hideout. "Some others are finishing up at the fake hideout. I\'m calling in the tip in an hour. It\'ll take a while for them to find the plans to send up to the safe. In the meantime, without the rangers the risk of infiltrating is high. Carm, I suggest that given the interception of the tapes, you call in and ask to see them at the intelligence building. Once you have access, you can find a way to unlock a door for us. We also have no way of getting those prisoners out without more information. We might need you to find out what you can so we can improvise. Otherwise, we can take our chances with using thermite."',
-        choices:[ 
-            {
-                text: 'Infiltrate as Ella',
-                next: ""
-            },  
-            {
-                text: 'Use thermite',
-                next: ""
-            },  
-            {
-                text: 'OR: Choose your own option',
-                next: ""
-            }, 
         ]
     },
     
@@ -627,16 +602,63 @@ const story = {
         choices:[ 
             {
                 text: 'Infiltrate as Ella',
+                next: "infiltrate_as_ella"
+            },  
+        ]
+    },
+
+    infiltrate_as_ella: {
+        chapter: "P12: Infiltrate As Ella",
+
+        text:
+            'Given that your cover as Ella is solidly in place, you call the officer to find a way into the building. "Hi there," you say. "I was just about to call you Ella. The tapes were stolen on their way to your embassy. I assume this was the purpose of your call. Not to worry, the tapes were recovered in the back of the truck and the perpetrators were captured. They are now in custody," says the officer. "I would like to come by to see the tapes. I suppose we can\'t risk shipping them so I will come personally," you reply. You hang up the phone, then announce your departure. Robert calls in the tip about the hideout, then equips you with an earpiece to communicate with the team. You leave and begin heading to the building. "Team, we\'re listening to the police scanners, they had a patrol by the hideout, they\'re already there. We need to delay them!" a hackcoon exclaims through the earpieces. "Don\'t worry, it\'ll be taken care of," says Robert. "Continue with the plan and trust me."',
+        choices:[ 
+            {
+                text: 'Continue the plan',
+                next: "continuation"
+            },  
+            {
+                text: 'Abort and let the raccoons go',
+                next: "aborting"
+            },  
+        ]
+    },
+    
+    continuation: {
+        chapter: "P12-1: Continue The Plan",
+
+        text:
+            'You continue into the building and past security, who lets you through without much of a hassle. You head to the stairwell, unlocking a door to the outside on your way, and tell the raccoons to wait for your signal. You go up to the officer\'s office and knock. The officer quickly swings the door open then runs back to his desk. "Ella, you came at a busy time, we just located a large terrorist encampment. The officers are held up by two raccoons in bomb vests. Once the threat is eliminated we will find the rest and enact justice."',
+        choices:[ 
+            {
+                text: '"Bomb vests?" (If you choose this option, elaborate on your intentions in the form)',
                 next: ""
             },  
             {
-                text: 'Use thermite',
+                text: 'Give the signal for the raccoons to infiltrate',
+                next: ""
+            },  
+        ]
+    },
+
+    aborting: {
+        chapter: "P12-2: Abort The Plan And Resort To Thermite",
+
+        text:
+            'Upon hearing about the delay, you back out of the plan and head back to the hideout. You monitor the infiltration team via their body cameras, as they infiltrate the building with thermite. They burn through a door and slowly make their way into the stairwell. The hackcoons set the cameras on their path to loop the last fifteen minutes as they make their way down to the server room. They first use thermite to burn a hole through the wall, then shove a tube through to deliver more to the cells for the prisoners to use to escape. "Destroy the locks and be prepared for the detonation," says the ranger raccoon over the radio. You call the officer. "Hi. I saw so many police out. I headed back to the embassy in fear that I might be heading towards danger," you say. "A shame, we just found a terrorist encampment, our people are currently..." Robert mutes the call to interject. "Carm, we need to find out when he\'s going to open that safe. Our people are sitting ducks in there." You nod and unmute the phone. "Anyways, we should have even better information than the security cameras in about 20 minutes. Can you make your way back here?" asks the officer.',
+            choices:[ 
+            {
+                text: 'Go there',
+                next: ""
+            },  
+            {
+                text: 'Respectfully decline for the moment',
                 next: ""
             },  
             {
                 text: 'OR: Choose your own option',
                 next: ""
-            }, 
+            },  
         ]
     },
 };
