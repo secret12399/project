@@ -251,7 +251,7 @@ const story = {
             },
             {
                 text: "Skip to current",
-                next: "regroup"
+                next: "continuation"
             },
         ]
     },
@@ -631,30 +631,64 @@ const story = {
             'You continue into the building and past security, who lets you through without much of a hassle. You head to the stairwell, unlocking a door to the outside on your way, and tell the raccoons to wait for your signal. You go up to the officer\'s office and knock. The officer quickly swings the door open then runs back to his desk. "Ella, you came at a busy time, we just located a large terrorist encampment. The officers are held up by two raccoons in bomb vests. Once the threat is eliminated we will find the rest and enact justice."',
         choices:[ 
             {
-                text: '"Bomb vests?" (If you choose this option, elaborate on your intentions in the form)',
-                next: ""
-            },  
-            {
-                text: 'Give the signal for the raccoons to infiltrate',
-                next: ""
+                text: '"Bomb vests?"',
+                next: "bv"
             },  
         ]
     },
 
-    aborting: {
-        chapter: "P12-2: Abort The Plan And Resort To Thermite",
+    bv: {
+        chapter: "P13: Inquire About Bomb Vests",
 
         text:
-            'Upon hearing about the delay, you back out of the plan and head back to the hideout. You monitor the infiltration team via their body cameras, as they infiltrate the building with thermite. They burn through a door and slowly make their way into the stairwell. The hackcoons set the cameras on their path to loop the last fifteen minutes as they make their way down to the server room. They first use thermite to burn a hole through the wall, then shove a tube through to deliver more to the cells for the prisoners to use to escape. "Destroy the locks and be prepared for the detonation," says the ranger raccoon over the radio. You call the officer. "Hi. I saw so many police out. I headed back to the embassy in fear that I might be heading towards danger," you say. "A shame, we just found a terrorist encampment, our people are currently..." Robert mutes the call to interject. "Carm, we need to find out when he\'s going to open that safe. Our people are sitting ducks in there." You nod and unmute the phone. "Anyways, we should have even better information than the security cameras in about 20 minutes. Can you make your way back here?" asks the officer.',
-            choices:[ 
+            '"Wait, what\'s going on with the bomb vests? Tell me everything you know please, and whoever leads the raccoons must also answer for this!" you hint to Robert. The officer goes first saying, "Well, we got a call regarding a terrorist hideout. We had officers right outside, so we sent them to investigate. Almost immediately after they entered, raccoons came running wearing bomb vests. Our officers retreated and now they are at a stalemate with the terrorists." In the silence, Robert speaks. "I told my guys to try to delay the officers. They insisted it was no problem. I had no idea they\'d do something this stupid! They\'re doing exactly what we\'re trying to stand against!" As you take a moment to think on the situation, the officer gets news over his radio. "The threats are neutralized. They seem to have activated their bombs and started panicking. The explosions weren\'t even big enough to destroy any of the evidence, our apprehension was unnecessary. Files are coming your way shortly." The earpiece is filled with cries of sadness as the raccoons hear of the loss of their friends.',
+        choices:[
             {
-                text: 'Go there',
+                text: 'Continue the plan',
+                next: "c"
+            },  
+            {
+                text: 'Abort mission',
+                next: "a"
+            },  
+        ]
+    },
+    
+    c: {
+        chapter: "P13-1: Give The Signal",
+
+        text:
+            '"Good, it seems we can finally deal with this terrorism threat. Once we have these files and I have seen the tapes, we can send everything to Italy and our defence department will surely want to work with you on securing our country from the terrorists <i>entering</i>." Upon hearing the word, the raccoons use the thermite to burn through the entrance to the stairwell and slowly make their way inside. The hackcoons set the cameras on their path to loop the last fifteen minutes as they make their way down to the server room. They first use thermite to burn a hole through the wall, then shove a tube through to deliver some thermite to the cells for the prisoners to use to escape. "Destroy the locks and be prepared for the detonation," says the ranger raccoon over the radio. They then make their way back into the stairwell and wait at the entrance to the second floor. "Awaiting your call ma\'am. Let us know when the safe is open and we\'ll come breach." In the meantime, the files were delivered to the building, and you hear them travelling through the pneumatic tubes. "Oh already we have one set of files... I believe these are basic records they kept, nothing too interesting... but we will see in a moment"',
+        choices:[
+            {
+                text: 'Breach',
                 next: ""
             },  
             {
-                text: 'Respectfully decline for the moment',
+                text: 'Delay and learn more (fill in the form for specific questions you want to ask)',
                 next: ""
             },  
+        ]
+    },
+    
+    a: {
+        chapter: "P13-2: Abort Mission",
+
+        text:
+            'You decide that too much is out of place and you need to straighten things out before you continue further with this plan. "Thank you for having me, but I feel unsafe being here with such terrorism going on. I would like to leave." You turn and head out. The officer begins to walk you out and offer a ride to the embassy, but he puts a finger up as he hears the slight whirring of the pneumatics and he turns and heads back into the office.',
+        choices:[
+            {
+                text: 'Give the signal',
+                next: ""
+            },  
+            {
+                text: 'Leave',
+                next: ""
+            },  
+            {
+                text: 'Expose RaccGang',
+                next: ""
+            }, 
             {
                 text: 'OR: Choose your own option',
                 next: ""
