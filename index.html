@@ -251,7 +251,7 @@ const story = {
             },
             {
                 text: "Skip to current",
-                next: "continuation"
+                next: "c"
             },
         ]
     },
@@ -664,37 +664,68 @@ const story = {
                 text: 'Breach',
                 next: ""
             },  
+        ]
+    },
+
+    feller: {
+        chapter: "P14: Breach",
+
+        text:
+            'The officer opens the safe and waits for the files to enter. "I\'m excited to see what <i>breached</i> their seals," you say. As soon as they hear the signal, the raccoons break into the office and the ranger raccoon tosses a baton to knock out the officer. You feign fear to maintain your persona, and back away into the corner as they raid the safe. "Good work team! Destroy it all! Save our brothers and sisters!" Robert exclaims. The ranger raccoon moves to ignite the papers, but the officer quickly gets up and grabs him then pulls out a gun and aims at the remaining raccoons. Without the pistol offered by Coop, you can do nothing as two of the remaining raccoons are shot and the others run from the room for their safety.',
+        choices:[
             {
-                text: 'Delay and learn more (fill in the form for specific questions you want to ask)',
+                text: 'Help the ranger raccoon',
+                next: ""
+            },  
+            {
+                text: 'Let the ranger die',
                 next: ""
             },  
         ]
     },
-    
-    a: {
-        chapter: "P13-2: Abort Mission",
+
+    anotha1: {
+        chapter: "P14-1: Help The Ranger",
 
         text:
-            'You decide that too much is out of place and you need to straighten things out before you continue further with this plan. "Thank you for having me, but I feel unsafe being here with such terrorism going on. I would like to leave." You turn and head out. The officer begins to walk you out and offer a ride to the embassy, but he puts a finger up as he hears the slight whirring of the pneumatics and he turns and heads back into the office.',
+            'You try to help without compromising your identity. "Do they have explosives? Be careful, he could <i>detonate</i> at any moment." Upon hearing the final signal, the holding cell wall is detonated, and alarms blare in the building. The officer drops the ranger, who quickly bites his ankle, causing the officer to pull the trigger of his gun and shoot his own foot. As he reels in pain, the ranger grabs all the evidence and makes his escape. With the stealth broken, the officer calls in the emergency and tells the building guards to be vigilant and that raccoons have infiltrated the building. You run out in the chaos and see raccoons being shot as they run for freedom.',
         choices:[
             {
-                text: 'Give the signal',
+                text: 'Help defend the raccoons',
+                next: ""
+            },  
+            {
+                text: 'Escape',
+                next: ""
+            },  
+            {
+                text: 'OR: Choose your own option',
+                next: ""
+            },
+        ]
+    },
+
+    anotha2: {
+        chapter: "P14-2: Let The Ranger Die",
+
+        text:
+            'The risk to your cover is too great to help the ranger. He is shot by the officer and he calls in the breach to the facility. The files are still in the safe, and the officer is moving to close it.',
+        choices:[
+            {
+                text: 'Delay the officer from closing the safe',
+                next: ""
+            },  
+            {
+                text: 'Stop the officer (indicate how in the form)',
                 next: ""
             },  
             {
                 text: 'Leave',
                 next: ""
             },  
-            {
-                text: 'Expose RaccGang',
-                next: ""
-            }, 
-            {
-                text: 'OR: Choose your own option',
-                next: ""
-            },  
         ]
     },
+    
 };
     
 
