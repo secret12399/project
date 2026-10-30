@@ -251,7 +251,7 @@ const story = {
             },
             {
                 text: "Skip to current",
-                next: "c"
+                next: "anotha1"
             },
         ]
     },
@@ -691,41 +691,62 @@ const story = {
             'You try to help without compromising your identity. "Do they have explosives? Be careful, he could <i>detonate</i> at any moment." Upon hearing the final signal, the holding cell wall is detonated, and alarms blare in the building. The officer drops the ranger, who quickly bites his ankle, causing the officer to pull the trigger of his gun and shoot his own foot. As he reels in pain, the ranger grabs all the evidence and makes his escape. With the stealth broken, the officer calls in the emergency and tells the building guards to be vigilant and that raccoons have infiltrated the building. You run out in the chaos and see raccoons being shot as they run for freedom.',
         choices:[
             {
-                text: 'Help defend the raccoons',
-                next: ""
+                text: 'Find weaponry',
+                next: "anotha2"
             },  
-            {
-                text: 'Escape',
-                next: ""
-            },  
-            {
-                text: 'OR: Choose your own option',
-                next: ""
-            },
         ]
     },
 
     anotha2: {
-        chapter: "P14-2: Let The Ranger Die",
+        chapter: "P15: Take Up Arms",
 
         text:
-            'The risk to your cover is too great to help the ranger. He is shot by the officer and he calls in the breach to the facility. The files are still in the safe, and the officer is moving to close it.',
+            'You run into the armoury and find a sword hilt. As you pick it up, the a blade appears, although you are unsure how it fit in the hilt or where it came from. Regardless, it is sturdy and capable of inflicting damage. Upon exiting the armoury, you see a guard with his hands around Boop\'s neck and you stab the guard. Boop is dropped, and starts to hobble with a broken leg. Your cover is broken. You can hear gunfire and raccoons running throughout the building. Guards are closing in on your location.',
         choices:[
             {
-                text: 'Delay the officer from closing the safe',
+                text: 'Carry Boop to safety',
+                next: "safety"
+            },  
+            {
+                text: 'Go back for the other raccoons',
+                next: "goback"
+            },  
+        ]
+    },
+
+    safety: {
+        chapter: "P15-1: Save Boop",
+
+        text:
+            'You pick up Boop and sprint to the exit with him before the guards can reach your position. You are soon followed out by a few straggling raccoons who catch up to you as you run to escape. You all return to the RaccGang headquarters and regroup with the others. While solemn due to the losses incurred, the morale is high upon seeing what\'s left of their comrades freed. The ranger raccoon hands you the documents from the safe for you to look after. You skim through the documents, which are neatly ordered dossiers on the former prisoners and other raccoons that they have yet to capture or are yet to identify. "Are those the files from the safe?! Excellent! We need to destroy them so we can finally be free! This is the moment we\'ve been waiting for!" exclaims Robert.',
+        choices:[
+            {
+                text: 'Burn the documents',
                 next: ""
             },  
             {
-                text: 'Stop the officer (indicate how in the form)',
-                next: ""
-            },  
-            {
-                text: 'Leave',
+                text: 'Keep the documents',
                 next: ""
             },  
         ]
     },
-    
+
+    goback: {
+        chapter: "P15-2: Go Back",
+
+        text:
+            'You pick up Boop and head back inside, fighting guards along the way. You save eight raccoons from certain death. As you and your gaze of raccoons head to the exit, a guard on the ground regains consciousness, yelling out in pain from his wounds, but picks up his gun and aims at Boop. He fires. You pull out your sword to block three bullets, leaving the weapon\'s magazine empty, and your sword destroyed. You all exit safely, and return to the RaccGang headquarters and regroup with the others. While solemn due to the losses incurred, the morale is high upon seeing many of their comrades freed. The ranger raccoon hands you the documents from the safe for you to look after. You skim through the documents, which are neatly ordered dossiers on the former prisoners and other raccoons that they have yet to capture or are yet to identify. "Are those the files from the safe?! Excellent! We need to destroy them so we can finally be free! This is the moment we\'ve been waiting for!" exclaims Robert.',
+        choices:[
+            {
+                text: 'Burn the documents',
+                next: ""
+            },  
+            {
+                text: 'Keep the documents',
+                next: ""
+            },  
+        ]
+    },
 };
     
 
