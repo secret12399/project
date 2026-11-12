@@ -251,7 +251,7 @@ const story = {
             },
             {
                 text: "Skip to current",
-                next: "anotha1"
+                next: "safety"
             },
         ]
     },
@@ -719,40 +719,24 @@ const story = {
 
         text:
             'You pick up Boop and sprint to the exit with him before the guards can reach your position. You are soon followed out by a few straggling raccoons who catch up to you as you run to escape. You all return to the RaccGang headquarters and regroup with the others. While solemn due to the losses incurred, the morale is high upon seeing what\'s left of their comrades freed. The ranger raccoon hands you the documents from the safe for you to look after. You skim through the documents, which are neatly ordered dossiers on the former prisoners and other raccoons that they have yet to capture or are yet to identify. "Are those the files from the safe?! Excellent! We need to destroy them so we can finally be free! This is the moment we\'ve been waiting for!" exclaims Robert.',
-        choices:[
-            {
-                text: 'Burn the documents',
-                next: ""
-            },  
+        choices:[ 
             {
                 text: 'Keep the documents',
-                next: ""
+                next: "keeps"
             },  
-            {
-                text: 'OR: Choose your own option',
-                next: ""
-            }, 
         ]
     },
 
-    goback: {
-        chapter: "P15-2: Go Back",
+    keeps: {
+        chapter: "P16: Keep The Documents",
 
         text:
-            'You pick up Boop and head back inside, fighting guards along the way. You save eight raccoons from certain death. As you and your gaze of raccoons head to the exit, a guard on the ground regains consciousness, yelling out in pain from his wounds, but picks up his gun and aims at Boop. He fires. You pull out your sword to block three bullets, leaving the weapon\'s magazine empty, and your sword destroyed. You all exit safely, and return to the RaccGang headquarters and regroup with the others. While solemn due to the losses incurred, the morale is high upon seeing many of their comrades freed. The ranger raccoon hands you the documents from the safe for you to look after. You skim through the documents, which are neatly ordered dossiers on the former prisoners and other raccoons that they have yet to capture or are yet to identify. "Are those the files from the safe?! Excellent! We need to destroy them so we can finally be free! This is the moment we\'ve been waiting for!" exclaims Robert.',
-        choices:[
+            'You choose not to hand over the documents. "Why are you keeping the documents?" asks Robert. "We need to destroy them to be free." The raccooons become suspicious of you and wonder why you are choosing to keep the documents that will foster their salvation.',
+        choices:[ 
             {
-                text: 'Burn the documents',
+                text: 'Explain why you are keeping the documents (form please)',
                 next: ""
             },  
-            {
-                text: 'Keep the documents',
-                next: ""
-            },  
-            {
-                text: 'OR: Choose your own option',
-                next: ""
-            }, 
         ]
     },
 };
