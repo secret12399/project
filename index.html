@@ -251,7 +251,7 @@ const story = {
             },
             {
                 text: "Skip to current",
-                next: "safety"
+                next: "keeps"
             },
         ]
     },
@@ -734,7 +734,50 @@ const story = {
             'You choose not to hand over the documents. "Why are you keeping the documents?" asks Robert. "We need to destroy them to be free." The raccooons become suspicious of you and wonder why you are choosing to keep the documents that will foster their salvation.',
         choices:[ 
             {
-                text: 'Explain why you are keeping the documents (form please)',
+                text: 'Answer the raccoons',
+                next: "docs1"
+            },  
+        ]
+    },
+
+    docs1: {
+        chapter: "P17: Answer The Raccoons",
+
+        text:
+            'You consider the content in the documents. You are confused as to why the officers would store fake images of propaganda with real documents pertaining to the raccoons. You further intuit that if the documents were photoshopped, they would have no need to store and defend the original physical copies since they are false. If Robert destroys the documents, you will have no opportunity to verify these assertions, and if they are true, he will be able to escape with impunity. If false, verifying the falsity of these documents will set your mind at ease and maintain your confidence in Robert\'s leadership. However, preventing the destruction of the documents may elicit suspicion from Robert.',
+        choices:[ 
+            {
+                text: 'Keep the documents',
+                next: "BOMBS"
+            },  
+            {
+                text: 'Destroy the documents',
+                next: "ALSO_BOMBS"
+            }, 
+        ]
+    },
+
+    BOMBS: {
+        chapter: "P17-1: Don\'t Hand Them Over",
+
+        text:
+            'You put the documents in your pocket and refuse to hand them over. "I will keep these until we\'re certain that all of the information we need to destroy is here. If any is missing, we will find it and destroy those as well." Robert reluctantly agrees and leaves. You invite Coop and Boop to head to the command room to look through the documents, hoping to keep your distance from Robert due to your suspicions. You hear a hissing noise outside of the room, followed by thuds and high-pitched beeping. A faint smoke creeps into the room and makes you feel dizzy almost instantly. The three of you run to the armoury at the back of the room and grab gas masks. While there, you also have the opportunity to secure more weaponry. Available are guns, swords, bats, explosives, and any weaponry you can imagine. Given the time constraints and weight of the equipment, you can only grab one large item and one small item.',
+        choices:[ 
+            {
+                text: 'Select weaponry (indicate selection)',
+                next: ""
+            },  
+        ]
+    },
+    
+    ALSO_BOMBS: {
+        chapter: "P17-2: Hand Them Over",
+
+        text:
+            'You are suspicious of Robert, but you know that refusing to hand over the documents bodes poorly when they are right in front of him. You hand over the documents. Robert immediately ignites them, to the cheers of the fellow raccoons. "I\'ll grab some champagne to celebrate!" exclaims Robert. Everybody prepares for a feast to celebrate the destruction of the documents and the completion of RaccGang\'s work. You remain wary, and consider the possibility that Robert may have malicious plans due to your suspicions. As you sit at the table with the raccoons, steel bars drop down and encircle everybody. Robert runs out and plants bombs outside the cage. "I\'m finally free! But you all know too much. You have to die." he shouts. He starts a five minute timer on the bombs and runs out before they explode. However, one of the raccoons you saved when you went back in the embassy was severely malnourished in captivity, and is able to fit through the bars to escape the cell. You recognize this immediately due to your preparation, and command him to go to the armoury and bring thermite to cut through the cell. The ranger raccoon breaks you all out of the cell and begins disarming the bombs. You run to the armoury and see a massive assortment of weapons, explosives and keys to all types of ground vehicles. You rush to grab equipment, knowing that every second is precious as Robert escapes.',
+        choices:[ 
+            {
+                text: 'Select weaponry (indicate selection)',
                 next: ""
             },  
         ]
